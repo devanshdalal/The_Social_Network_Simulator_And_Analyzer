@@ -1,0 +1,43 @@
+//////////////////////////////////////////this class contains dfs and bfs algorithms //////////////////////////////////
+#ifndef ALGORITHMS_H_
+#define ALGORITHMS_H_
+
+#include <iostream>
+#include <cstring>
+#include <string>
+#include <vector>
+#include <queue>
+#include <fstream>
+#include <string.h>
+#include <stdlib.h>
+#include "network.h"
+#include <algorithm>
+#include <set>
+
+
+using namespace std;
+
+class Algorithms{
+	public:
+	void bfs(GraphNode*);
+	void dfs(GraphNode*);
+	int bfs_shortest(GraphNode*,GraphNode*);
+	int dfs_shortest(GraphNode*,GraphNode*);
+	void init(GraphNode*);
+	vector<vector<int> > Path (int,int);
+	GraphNode* findByName(string);
+	GraphNode* findByID(string);
+	void FloydWarshall();
+	set<GraphNode* > clique(set<GraphNode*>,GraphNode*,int);
+	void dijkstra(GraphNode* ,GraphNode*);
+
+	private:
+	void mainDfs(GraphNode*);
+
+};
+
+extern vector<GraphNode*> G;
+extern Network network;
+extern int vertices;
+extern int ** D; //Distance Matrix
+#endif /* ALGORITHMS_H_ */

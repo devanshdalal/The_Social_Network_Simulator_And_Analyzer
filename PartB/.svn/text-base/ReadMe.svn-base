@@ -1,0 +1,17 @@
+
+
+
+Gyani: reads query from std::in and sends it to analyzer
+
+Analyzer: first reads the graphml file and recieves query from Gyani and returns the result.
+
+Algorithms.cpp : contains all the required algorithms
+					1. Dijkstra's algorithm
+					2. Floyd-Warshall algorithm
+					3. Bredth First Search algorithms
+
+Network.cpp: read graphml function, and stores the nodes
+
+Running of code: Make file(make)
+				
+				then, enter Your queries.	

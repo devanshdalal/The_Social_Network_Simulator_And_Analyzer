@@ -1,0 +1,357 @@
+\hypertarget{classAlgorithms}{\section{\-Algorithms \-Class \-Reference}
+\label{classAlgorithms}\index{\-Algorithms@{\-Algorithms}}
+}
+
+
+{\ttfamily \#include $<$algorithms.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classAlgorithms_a28ae4d8d83ba5351b9589ed21dccaa64}{bfs} (\hyperlink{structGraphNode}{\-Graph\-Node} $\ast$)
+\begin{DoxyCompactList}\small\item\em \-Breadth first search on graph starting from the input node and traverse the whole connected component of the graph. \end{DoxyCompactList}\item 
+void \hyperlink{classAlgorithms_a055ca9200bb41109721eb332aab710eb}{dfs} (\hyperlink{structGraphNode}{\-Graph\-Node} $\ast$)
+\begin{DoxyCompactList}\small\item\em \-Depth first search on graph starting from the input node and traverse the whole connected component of the graph. \end{DoxyCompactList}\item 
+int \hyperlink{classAlgorithms_a632f4fd1b849ad48a20d671c9c681903}{bfs\-\_\-shortest} (\hyperlink{structGraphNode}{\-Graph\-Node} $\ast$, \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$)
+\begin{DoxyCompactList}\small\item\em \-Breadth first search on graph starting from the first node and traverse till second node is found or whole connected component of graph is traversed. \end{DoxyCompactList}\item 
+int \hyperlink{classAlgorithms_aff3cab25b1a219714965a6a820740836}{dfs\-\_\-shortest} (\hyperlink{structGraphNode}{\-Graph\-Node} $\ast$, \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$)
+\begin{DoxyCompactList}\small\item\em \-Depth first search on graph starting from the first node and traverse till second node is found or whole connected component of graph is traversed. \end{DoxyCompactList}\item 
+void \hyperlink{classAlgorithms_af0154806d5c01828df47d898cfa87d51}{init} (\hyperlink{structGraphNode}{\-Graph\-Node} $\ast$)
+\begin{DoxyCompactList}\small\item\em \-Marks the nodes of graph as un\-Visisted and distance to positive infinity. \end{DoxyCompactList}\item 
+\hyperlink{structGraphNode}{\-Graph\-Node} $\ast$ \hyperlink{classAlgorithms_adb4d1a40501cccbaea49a2dfbd836581}{find\-By\-Name} (string)
+\begin{DoxyCompactList}\small\item\em \-Finds the node corresponding to the given name in graph(if multiple instances exists then return the one formed earlier) \end{DoxyCompactList}\item 
+\hyperlink{structGraphNode}{\-Graph\-Node} $\ast$ \hyperlink{classAlgorithms_ae9b36b1236b546fe3d5d6f32737acde9}{find\-By\-I\-D} (string)
+\begin{DoxyCompactList}\small\item\em \-Finds the node corresponding to the given \-I\-D in graph(if multiple instances exists then return the one formed earlier) \end{DoxyCompactList}\item 
+void \hyperlink{classAlgorithms_a7b0d9faca96eb10bd86a023ded0d1d58}{\-Floyd\-Warshall} ()
+\begin{DoxyCompactList}\small\item\em \-It constructs shortest distance matrix. \end{DoxyCompactList}\item 
+set$<$ \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$ $>$ \hyperlink{classAlgorithms_a0539a806914c01b39f509b62d6f09eb5}{clique} (set$<$ \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$ $>$, \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$, int)
+\begin{DoxyCompactList}\small\item\em \-Finds the clique of the input node and store it in the given set. \end{DoxyCompactList}\item 
+void \hyperlink{classAlgorithms_a1cd00ff4730254ce7c7907ad0dbd8c91}{dijkstra} (\hyperlink{structGraphNode}{\-Graph\-Node} $\ast$, \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$)
+\begin{DoxyCompactList}\small\item\em \-To find the shortest path and its length from first node to second, inbuilt priority queue is used with greedy implementation.\-O($|$\-V$|$log$|$\-E$|$) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class exposes all the algorithms such as dfs, bfs, dijkstra and floyd\-Warshall to the analyser. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classAlgorithms_a28ae4d8d83ba5351b9589ed21dccaa64}{\index{\-Algorithms@{\-Algorithms}!bfs@{bfs}}
+\index{bfs@{bfs}!Algorithms@{\-Algorithms}}
+\subsubsection[{bfs}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Algorithms\-::bfs} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Graph\-Node} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{classAlgorithms_a28ae4d8d83ba5351b9589ed21dccaa64}
+
+
+\-Breadth first search on graph starting from the input node and traverse the whole connected component of the graph. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Graph\-Node$\ast$} & pointer to the starting node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void 
+\end{DoxyReturn}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classAlgorithms_a28ae4d8d83ba5351b9589ed21dccaa64_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classAlgorithms_a28ae4d8d83ba5351b9589ed21dccaa64_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classAlgorithms_a632f4fd1b849ad48a20d671c9c681903}{\index{\-Algorithms@{\-Algorithms}!bfs\-\_\-shortest@{bfs\-\_\-shortest}}
+\index{bfs\-\_\-shortest@{bfs\-\_\-shortest}!Algorithms@{\-Algorithms}}
+\subsubsection[{bfs\-\_\-shortest}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Algorithms\-::bfs\-\_\-shortest} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Graph\-Node} $\ast$}]{a, }
+\item[{{\bf \-Graph\-Node} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{classAlgorithms_a632f4fd1b849ad48a20d671c9c681903}
+
+
+\-Breadth first search on graph starting from the first node and traverse till second node is found or whole connected component of graph is traversed. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Graph\-Node$\ast$} & pointer to the starting node \\
+\hline
+{\em \-Graph\-Node$\ast$} & pointer to the ending node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int returns shortest distance between the above two nodes. 
+\end{DoxyReturn}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAlgorithms_a632f4fd1b849ad48a20d671c9c681903_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classAlgorithms_a0539a806914c01b39f509b62d6f09eb5}{\index{\-Algorithms@{\-Algorithms}!clique@{clique}}
+\index{clique@{clique}!Algorithms@{\-Algorithms}}
+\subsubsection[{clique}]{\setlength{\rightskip}{0pt plus 5cm}set$<$ {\bf \-Graph\-Node} $\ast$ $>$ {\bf \-Algorithms\-::clique} (
+\begin{DoxyParamCaption}
+\item[{set$<$ {\bf \-Graph\-Node} $\ast$ $>$}]{data, }
+\item[{{\bf \-Graph\-Node} $\ast$}]{parent, }
+\item[{int}]{traversed}
+\end{DoxyParamCaption}
+)}}\label{classAlgorithms_a0539a806914c01b39f509b62d6f09eb5}
+
+
+\-Finds the clique of the input node and store it in the given set. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em set$<$\-Graph\-Node$\ast$$>$} & growing set of persons in the clique of the person. \\
+\hline
+{\em \-Graph\-Node$\ast$} & the node corresponding to the person which we are finding clique. \\
+\hline
+{\em int} & index upto which we have searched in the friendlist of the person \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+set$<$\-Graph\-Node$\ast$$>$ 
+\end{DoxyReturn}
+
+
+\-Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classAlgorithms_a0539a806914c01b39f509b62d6f09eb5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classAlgorithms_a055ca9200bb41109721eb332aab710eb}{\index{\-Algorithms@{\-Algorithms}!dfs@{dfs}}
+\index{dfs@{dfs}!Algorithms@{\-Algorithms}}
+\subsubsection[{dfs}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Algorithms\-::dfs} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Graph\-Node} $\ast$}]{temp}
+\end{DoxyParamCaption}
+)}}\label{classAlgorithms_a055ca9200bb41109721eb332aab710eb}
+
+
+\-Depth first search on graph starting from the input node and traverse the whole connected component of the graph. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Graph\-Node$\ast$} & pointer to the starting node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void 
+\end{DoxyReturn}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classAlgorithms_a055ca9200bb41109721eb332aab710eb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classAlgorithms_a055ca9200bb41109721eb332aab710eb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classAlgorithms_aff3cab25b1a219714965a6a820740836}{\index{\-Algorithms@{\-Algorithms}!dfs\-\_\-shortest@{dfs\-\_\-shortest}}
+\index{dfs\-\_\-shortest@{dfs\-\_\-shortest}!Algorithms@{\-Algorithms}}
+\subsubsection[{dfs\-\_\-shortest}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Algorithms\-::dfs\-\_\-shortest} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Graph\-Node} $\ast$}]{a, }
+\item[{{\bf \-Graph\-Node} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{classAlgorithms_aff3cab25b1a219714965a6a820740836}
+
+
+\-Depth first search on graph starting from the first node and traverse till second node is found or whole connected component of graph is traversed. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Graph\-Node$\ast$} & pointer to the starting node \\
+\hline
+{\em \-Graph\-Node$\ast$} & pointer to the ending node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int returns shortest distance between the above two nodes. 
+\end{DoxyReturn}
+
+
+\-Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAlgorithms_aff3cab25b1a219714965a6a820740836_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classAlgorithms_a1cd00ff4730254ce7c7907ad0dbd8c91}{\index{\-Algorithms@{\-Algorithms}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!Algorithms@{\-Algorithms}}
+\subsubsection[{dijkstra}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Algorithms\-::dijkstra} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Graph\-Node} $\ast$}]{stud1, }
+\item[{{\bf \-Graph\-Node} $\ast$}]{stud2}
+\end{DoxyParamCaption}
+)}}\label{classAlgorithms_a1cd00ff4730254ce7c7907ad0dbd8c91}
+
+
+\-To find the shortest path and its length from first node to second, inbuilt priority queue is used with greedy implementation.\-O($|$\-V$|$log$|$\-E$|$) 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Graph\-Node$\ast$} & starting node of dijkstra. \\
+\hline
+{\em \-Graph\-Node$\ast$} & ending node of dijkstra. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void 
+\end{DoxyReturn}
+
+
+\-Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classAlgorithms_a1cd00ff4730254ce7c7907ad0dbd8c91_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classAlgorithms_ae9b36b1236b546fe3d5d6f32737acde9}{\index{\-Algorithms@{\-Algorithms}!find\-By\-I\-D@{find\-By\-I\-D}}
+\index{find\-By\-I\-D@{find\-By\-I\-D}!Algorithms@{\-Algorithms}}
+\subsubsection[{find\-By\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Graph\-Node} $\ast$ {\bf \-Algorithms\-::find\-By\-I\-D} (
+\begin{DoxyParamCaption}
+\item[{string}]{s}
+\end{DoxyParamCaption}
+)}}\label{classAlgorithms_ae9b36b1236b546fe3d5d6f32737acde9}
+
+
+\-Finds the node corresponding to the given \-I\-D in graph(if multiple instances exists then return the one formed earlier) 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em string} & the \-I\-D to be searched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Graph\-Node$\ast$ pointer to the searched node. 
+\end{DoxyReturn}
+
+
+\-Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classAlgorithms_ae9b36b1236b546fe3d5d6f32737acde9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classAlgorithms_adb4d1a40501cccbaea49a2dfbd836581}{\index{\-Algorithms@{\-Algorithms}!find\-By\-Name@{find\-By\-Name}}
+\index{find\-By\-Name@{find\-By\-Name}!Algorithms@{\-Algorithms}}
+\subsubsection[{find\-By\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Graph\-Node} $\ast$ {\bf \-Algorithms\-::find\-By\-Name} (
+\begin{DoxyParamCaption}
+\item[{string}]{s}
+\end{DoxyParamCaption}
+)}}\label{classAlgorithms_adb4d1a40501cccbaea49a2dfbd836581}
+
+
+\-Finds the node corresponding to the given name in graph(if multiple instances exists then return the one formed earlier) 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em string} & the name to be searched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Graph\-Node$\ast$ pointer to the searched node. 
+\end{DoxyReturn}
+\hypertarget{classAlgorithms_a7b0d9faca96eb10bd86a023ded0d1d58}{\index{\-Algorithms@{\-Algorithms}!\-Floyd\-Warshall@{\-Floyd\-Warshall}}
+\index{\-Floyd\-Warshall@{\-Floyd\-Warshall}!Algorithms@{\-Algorithms}}
+\subsubsection[{\-Floyd\-Warshall}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Algorithms\-::\-Floyd\-Warshall} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAlgorithms_a7b0d9faca96eb10bd86a023ded0d1d58}
+
+
+\-It constructs shortest distance matrix. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classAlgorithms_af0154806d5c01828df47d898cfa87d51}{\index{\-Algorithms@{\-Algorithms}!init@{init}}
+\index{init@{init}!Algorithms@{\-Algorithms}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Algorithms\-::init} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Graph\-Node} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{classAlgorithms_af0154806d5c01828df47d898cfa87d51}
+
+
+\-Marks the nodes of graph as un\-Visisted and distance to positive infinity. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Graph\-Node$\ast$} & pointer to the node to be marked unvisited as \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void 
+\end{DoxyReturn}
+
+
+\-Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAlgorithms_af0154806d5c01828df47d898cfa87d51_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+algorithms.\-h\item 
+algorithms.\-cpp\end{DoxyCompactItemize}

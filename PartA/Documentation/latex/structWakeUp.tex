@@ -1,0 +1,41 @@
+\hypertarget{structWakeUp}{\section{\-Wake\-Up \-Struct \-Reference}
+\label{structWakeUp}\index{\-Wake\-Up@{\-Wake\-Up}}
+}
+
+
+\-The data structure that the timekeeper sends to the generator as a wake up call via the message queue.  
+
+
+
+
+{\ttfamily \#include $<$ipc.\-h$>$}
+
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{structWakeUp_a940f846cbf0d72532d67c185ad7f0531}{thread\-I\-D}
+\item 
+bool \hyperlink{structWakeUp_af12d17da0cc6f71e9794faffc3636dcd}{request\-\_\-accepted}
+\item 
+long \hyperlink{structWakeUp_aac900a0e75f73fb4683c889020459be9}{current\-\_\-time}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-The data structure that the timekeeper sends to the generator as a wake up call via the message queue. 
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{structWakeUp_aac900a0e75f73fb4683c889020459be9}{\index{\-Wake\-Up@{\-Wake\-Up}!current\-\_\-time@{current\-\_\-time}}
+\index{current\-\_\-time@{current\-\_\-time}!WakeUp@{\-Wake\-Up}}
+\subsubsection[{current\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf \-Wake\-Up\-::current\-\_\-time}}}\label{structWakeUp_aac900a0e75f73fb4683c889020459be9}
+the current time of the timekeeper \hypertarget{structWakeUp_af12d17da0cc6f71e9794faffc3636dcd}{\index{\-Wake\-Up@{\-Wake\-Up}!request\-\_\-accepted@{request\-\_\-accepted}}
+\index{request\-\_\-accepted@{request\-\_\-accepted}!WakeUp@{\-Wake\-Up}}
+\subsubsection[{request\-\_\-accepted}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Wake\-Up\-::request\-\_\-accepted}}}\label{structWakeUp_af12d17da0cc6f71e9794faffc3636dcd}
+whether the request send by the thread corresponding to the thread\-I\-D is accepted by the timekeeper. \hypertarget{structWakeUp_a940f846cbf0d72532d67c185ad7f0531}{\index{\-Wake\-Up@{\-Wake\-Up}!thread\-I\-D@{thread\-I\-D}}
+\index{thread\-I\-D@{thread\-I\-D}!WakeUp@{\-Wake\-Up}}
+\subsubsection[{thread\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf \-Wake\-Up\-::thread\-I\-D}}}\label{structWakeUp_a940f846cbf0d72532d67c185ad7f0531}
+\-A unique long number in the \hyperlink{structRequest}{\-Request} structure as per required in sending and recieving structure via the message queue. for thread\-I\-D 1. generate\-Faculty 2. generate\-Students 3. generate\-Courses 4. generate\-Friends 
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+ipc.\-h\end{DoxyCompactItemize}

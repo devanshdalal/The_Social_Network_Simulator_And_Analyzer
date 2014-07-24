@@ -1,0 +1,44 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Oct 8, 2013
+ *      Author: cs1120255
+ */
+
+
+#include <iostream>
+#include <fstream>
+#include <cstring>
+#include <vector>
+#include <stdlib.h>
+#include <pthread.h>
+#include "parser.h"
+#include "globals.h"
+#include "generator.h"
+#include "network.h"
+#include "timekeeper.h"
+#include <signal.h>
+#define NUM_THREADS 4
+
+using namespace std;
+
+int main(int argc, char** argv){
+
+	key_t key1 =ftok("./parser.h", 'A');
+	int msqid1 = msgget(key1, 0666| IPC_CREAT);
+	key_t key2 =ftok("./parser.h", 'B');
+	int msqid2 = msgget(key2, 0666| IPC_CREAT);
+
+	pid_t processID = fork();
+
+	if (processID==0){
+		execlp("./generator","./generator",argv[1]);
+		cout<<"GENERATE KILLS ITSELF AND TIMEKEEPER"<<endl;
+		kill(getppid(),9);
+	}
+	else {
+		execlp("./timekeeper","./timekeeper",argv[1]);
+	}
+	return 0;
+}
+

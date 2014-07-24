@@ -1,0 +1,3 @@
+all:
+	g++ analyzer.cpp network.cpp algorithms.cpp -lpthread -o analyzer
+	perl gyani.pl

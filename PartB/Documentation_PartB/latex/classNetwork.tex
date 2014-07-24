@@ -1,0 +1,126 @@
+\hypertarget{classNetwork}{\section{\-Network \-Class \-Reference}
+\label{classNetwork}\index{\-Network@{\-Network}}
+}
+
+
+\hyperlink{classNetwork}{\-Network} module for part \-B.  
+
+
+
+
+{\ttfamily \#include $<$network.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classNetwork_af1d5854ff8e43d83623af7703ca95264}{add\-Node} (\hyperlink{structGraphNode}{\-Graph\-Node} $\ast$)
+\begin{DoxyCompactList}\small\item\em \-Adds a node into the vector \-G(containing all nodes) \end{DoxyCompactList}\item 
+void \hyperlink{classNetwork_a0981eb57d7ecb023f0abb63f5d9824e3}{make\-Friends} (\hyperlink{structGraphNode}{\-Graph\-Node} $\ast$, \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$)
+\begin{DoxyCompactList}\small\item\em \-Makes the given nodes friends i.\-e. adds each person to adjacency list of other. \end{DoxyCompactList}\item 
+void \hyperlink{classNetwork_a7028b8c3023670df31383c49952d5e81}{generate\-Graph} (vector$<$ \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$ $>$)
+\begin{DoxyCompactList}\small\item\em generates the graph made at last (just a check function) \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$ $>$ \hyperlink{classNetwork_a39840cba43a0df9d537ac6c713faf787}{read\-Graph} ()
+\begin{DoxyCompactList}\small\item\em \-Reads graph, returns vector of pointers to nodes. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_a3acd7cd5049f7cc0230dda97c522e661}{string \hyperlink{classNetwork_a3acd7cd5049f7cc0230dda97c522e661}{give\-Name} (\hyperlink{structGraphNode}{\-Graph\-Node})}\label{classNetwork_a3acd7cd5049f7cc0230dda97c522e661}
+
+\begin{DoxyCompactList}\small\item\em \-Gives the name of the input node. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_aa943e2481ec6446a0fe187582cf46b95}{string \hyperlink{classNetwork_aa943e2481ec6446a0fe187582cf46b95}{entry\-Number} (\hyperlink{structGraphNode}{\-Graph\-Node})}\label{classNetwork_aa943e2481ec6446a0fe187582cf46b95}
+
+\begin{DoxyCompactList}\small\item\em \-Gives the entry number of the input node. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_ae04bd23796ff43aa597be1ec25916ecf}{string \hyperlink{classNetwork_ae04bd23796ff43aa597be1ec25916ecf}{employee\-Code} (\hyperlink{structGraphNode}{\-Graph\-Node})}\label{classNetwork_ae04bd23796ff43aa597be1ec25916ecf}
+
+\begin{DoxyCompactList}\small\item\em \-Gives the employee code of the input node. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_a096ef8fcafc52db5d2aaa82fe9285847}{string \hyperlink{classNetwork_a096ef8fcafc52db5d2aaa82fe9285847}{give\-University\-Name} (\hyperlink{structGraphNode}{\-Graph\-Node})}\label{classNetwork_a096ef8fcafc52db5d2aaa82fe9285847}
+
+\begin{DoxyCompactList}\small\item\em \-Gives the university name of the input node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{classNetwork}{\-Network} module for part \-B. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classNetwork_af1d5854ff8e43d83623af7703ca95264}{\index{\-Network@{\-Network}!add\-Node@{add\-Node}}
+\index{add\-Node@{add\-Node}!Network@{\-Network}}
+\subsubsection[{add\-Node}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-::add\-Node} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Graph\-Node} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_af1d5854ff8e43d83623af7703ca95264}
+
+
+\-Adds a node into the vector \-G(containing all nodes) 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Graph\-Node$\ast$} & pointer to the node to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classNetwork_a7028b8c3023670df31383c49952d5e81}{\index{\-Network@{\-Network}!generate\-Graph@{generate\-Graph}}
+\index{generate\-Graph@{generate\-Graph}!Network@{\-Network}}
+\subsubsection[{generate\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-::generate\-Graph} (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf \-Graph\-Node} $\ast$ $>$}]{a}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_a7028b8c3023670df31383c49952d5e81}
+
+
+generates the graph made at last (just a check function) 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em vector$<$\-Graph\-Node$\ast$$>$} & the graph to be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classNetwork_a0981eb57d7ecb023f0abb63f5d9824e3}{\index{\-Network@{\-Network}!make\-Friends@{make\-Friends}}
+\index{make\-Friends@{make\-Friends}!Network@{\-Network}}
+\subsubsection[{make\-Friends}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-::make\-Friends} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Graph\-Node} $\ast$}]{a, }
+\item[{{\bf \-Graph\-Node} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_a0981eb57d7ecb023f0abb63f5d9824e3}
+
+
+\-Makes the given nodes friends i.\-e. adds each person to adjacency list of other. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Graph\-Node$\ast$} & pointer to the first node \\
+\hline
+{\em \-Graph\-Node$\ast$} & pointer to the second node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classNetwork_a39840cba43a0df9d537ac6c713faf787}{\index{\-Network@{\-Network}!read\-Graph@{read\-Graph}}
+\index{read\-Graph@{read\-Graph}!Network@{\-Network}}
+\subsubsection[{read\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf \-Graph\-Node} $\ast$ $>$ {\bf \-Network\-::read\-Graph} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_a39840cba43a0df9d537ac6c713faf787}
+
+
+\-Reads graph, returns vector of pointers to nodes. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+vector$<$\-Graph\-Node$\ast$$>$ vector of pointers to nodes 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+network.\-h\item 
+network.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,27 @@
+/*
+ * timekeeper.h
+ *
+ *  Created on: Oct 12, 2013
+ *      Author: cs1120211
+ */
+
+#ifndef TIMEKEEPER_H_
+#define TIMEKEEPER_H_
+
+#include <stdio.h>
+#include <iostream>
+#include <stdlib.h>
+#include <errno.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/msg.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+
+
+int timeInit();
+
+#endif /* TIMEKEEPER_H_ */

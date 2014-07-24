@@ -1,0 +1,240 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Oct 8, 2013
+ *      Author: cs1120255
+ */
+
+
+#include <iostream>
+#include <sstream>
+#include <fstream>
+#include <cstring>
+#include<string>
+#include <vector>
+#include <set>
+#include <stdlib.h>
+#include "network.h"
+#include "algorithms.h"
+
+
+Algorithms Search;
+
+using namespace std;
+
+Network network;
+vector<GraphNode*> G;
+int vertices;
+int ** D;
+vector <int> ** I;
+vector <vector<int> > ** P;
+int * Importance;
+
+
+
+//void queries(int N,int P1, int P2)
+//{
+//	char in = 'y';
+//	while(in == 'y')
+//	{
+//		int p1;
+//		cout << "Please enter an integer value: ";
+//		cin >> p1;
+//		int p2;
+//		cout << "Please enter an integer value: ";
+//		cin >> p2;
+//		if(p1==p2)
+//		  cout<<"same persons"<<endl;
+//		else{
+//			vector<vector<int> > ans = P[p1][p2];
+//			for(int a =0; a < ans.size(); a++){
+//				cout<<"[";
+//				for(int b=0; b<ans[a].size(); b++){
+//					if(ans[a][b]>0)
+//						cout<<ans[a][b]<<" ";
+//				}
+//				cout<<"]"<<" ";
+//			}
+//		}
+//		cout<<"Would you like to continue?(y/n)"<<endl;
+//		cin >> in;
+//	}
+//}
+
+
+int main(int argc, char** argv)
+{
+
+	G = network.readGraph();
+	network.generateGraph(G);
+
+//	GraphNode* a1 = new GraphNode;
+//	GraphNode* a2 = new GraphNode;
+//	GraphNode* a3 = new GraphNode;
+//	a1->name = "ss";
+//	a2->name = "pp";
+//	a3->name = "dd";
+//	a1->friend_list.push_back(a2);
+//	a1->friend_list.push_back(a3);
+//	a2->friend_list.push_back(a1);
+//	a3->friend_list.push_back(a1);
+//	G.push_back(a1);
+//	G.push_back(a2);
+//	G.push_back(a3);
+//	vertices = 3;
+	vertices=G.size();
+	cerr<<vertices;
+	//Search.FloydWarshall();    ///
+	cout<<" start ";
+
+
+	// while
+	//question no.
+
+	// person1:     rollno.(format)   name
+
+	// person2:     rollno.(format)   name
+
+
+
+
+
+	int q;
+	//int person1 = givenode();
+	//int person2 = givenode();
+
+
+
+
+	char in = 'n';
+	while(in == 'y')
+	{
+		cout << "Please enter a Question number: ";
+		cin >> q;
+		if(q==4){
+				//The shortest path in the graph (between any pair of people)
+			// max D[i][j] matrix
+			int shortestPath=0;
+			for(int i=0; i<vertices; i++)
+				for(int j=0; j<vertices; j++)
+					if(shortestPath<D[i][j])
+						shortestPath=D[i][j];
+			if(shortestPath == vertices+1)
+				cout<<"Shortest path length: ∞"<<endl;
+			else
+				cout<<"Shortest path length: "<<shortestPath<<endl;
+		}
+		else
+		{
+			int p1;
+			cout << "Please enter first person's number: ";
+			cin >> p1;
+			int p2=0;
+			if(q!=1 && q!=5 && q!=6)
+			{
+				cout << "Please enter second person's number: ";
+				cin >> p2;
+			}
+			if(q==2 || q==3)
+			{
+				if(p1==p2)
+				  cout<<"same persons!"<<endl;
+				else
+				{
+					if(q==2)
+					{		
+						cout<<"Shortest distance between "<<p1<<" and "<< p2<< " is " <<D[p1][p2]<<endl;
+					}
+					if(q==3){
+	//						vector< vector<int> > ans2;
+	//						ans2	= P[p1][p2];
+	//						cout<<"All shortest paths between "<<p1<<" and "<< p2<< " are: " ;
+	//						for(int a =0; a < ans2.size(); a++){
+	//							cout<<"[";
+	//							for(int b=0; b<ans2[a].size(); b++)
+	//							{if(ans2[a][b]>0)
+	//								cout<<ans2[a][b]<<" ";
+	//							}
+	//							cout<<"]";
+	//						}
+							cout<<"shortest path"<<endl;  //Use BFS
+					}
+				}
+			}
+			else
+			{
+				if(q== 1){
+					//Size of Clique of a given person (identified by university name and ID)
+					cout<<"clique"<<endl;
+				}
+				if(q==5){
+					//cout<<Importance[p1]<<" is the importance number of "<<p1<<endl;
+					int importance=0;
+					for(int i=0; i<vertices; i++)
+						for(int j=i+1; j<vertices; j++)
+							if(D[i][j]==D[i][p1]+D[p1][j] && D[i][j]!=(vertices+1)){
+								cout<<D[i][j]<<" "<<D[i][p1]<<" "<<D[p1][j]<<endl;
+								importance++;
+							}
+					cout<<importance<<" is the importance number of "<<p1<<endl;
+				}
+				if(q==6){
+					int importance=0;
+					for(int i=0; i<vertices; i++)
+						for(int j=i+1; j<vertices; j++)
+							if(D[i][j]==D[i][p1]+D[p1][j] && D[i][j]!=(vertices+1)){
+								cout<<D[i][j]<<" "<<D[i][p1]<<" "<<D[p1][j]<<endl;
+								importance++;
+							}
+					int ia;
+					for(ia=0; ia<G[p1]->friend_list.size();ia++){
+						cout<<G[p1]->friend_list[ia]->number<<endl;
+						int importance2=0;
+						for(int i=0; i<vertices; i++)
+							for(int j=i+1; j<vertices; j++)
+								if(D[i][j]==D[i][G[p1]->friend_list[ia]->number]+D[G[p1]->friend_list[ia]->number][j] && D[i][j]!=(vertices+1)){
+									cout<<D[i][j]<<" "<<D[i][p1]<<" "<<D[p1][j]<<endl;
+									importance2++;
+								}
+						cout<<importance<<" "<<importance2<<endl;
+						if(importance < importance2){
+							cout<<"friend "<< G[p1]->friend_list[ia]->number <<" has higher Importance number than "<< p1<<endl;
+							break;
+						}
+					}
+					if(ia==G[p1]->friend_list.size())
+						cout<<"person has maximum importance"<<endl;
+	//					if(Importance[p1]<Importance[G[p1]->friend_list[i]->number])
+	//					{
+	//						cout<<"Yes,";
+	//						break;
+	//					}
+	//				cout<<"friend "<< Importance[G[p1]->friend_list[i]->number] <<" has higher Importance number than "<< p1<<endl;
+				}
+			}
+		}
+
+	cout<<"Would you like to continue?(y/n)"<<endl;
+	cin >> in;
+	}
+
+
+
+	GraphNode* temp;
+	cout<<G.size()<<endl;
+//	for(int k=0;k<G.size();k++)
+//		if(G[k]->name.length()==15)cout<<G[k]->name<<endl;
+	temp= Search.findByName("ss");
+	for(int i=0;i<temp->friend_list.size();i++){
+		cout<<temp->friend_list[i]->name<<endl;
+	}
+
+	set<GraphNode*> data;
+	data=Search.clique(data,temp,-1);
+	//cout<<temp->friend_list[0]->name<<" "<<temp->friend_list[1]->name<<" "<<temp->friend_list[2]->name<<endl;
+	cout<<" clique size "<<data.size()+1<<endl;
+
+
+	return 0;
+}
+

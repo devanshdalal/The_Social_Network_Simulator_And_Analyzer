@@ -1,0 +1,81 @@
+/*
+ * parser.h
+ *
+ *  Created on: Oct 8, 2013
+ *      Author: cs1120255
+ */
+#include <iostream>
+#include <fstream>
+#include <string.h>
+#include <vector>
+#include <stdlib.h>
+#include "network.h"
+
+using namespace std;
+
+#ifndef PARSER_H_
+#define PARSER_H_
+
+struct University;
+struct GraphNode;
+
+typedef struct Course{
+	string course_name;
+	string dept_that_offers;
+	float frequency_per_year;
+	GraphNode* instructor;
+}Course;
+
+typedef struct Interest{
+	string interest_name;
+	float popularity;
+}Interest;
+
+typedef struct Department{
+	string dept_name;
+	University * dep_univ;
+	int num_faculty;
+	int num_students_per_year;
+	float semester_dept_courses;
+	float semester_nondept_courses;
+	vector<GraphNode*> faculties;
+	vector<Course> course_array;
+	vector<Course*> floated_courses;
+}Department;
+
+typedef struct University{
+	string university_name;
+	vector<Department> department_array;
+	vector<Interest> interest_array;
+	vector<string> hostel_name;
+	vector<string> locality_name;
+	float friendship_rate;
+	float openness;
+	float friendliness;
+
+}University;
+
+typedef struct Randomseed{
+	int faculty_random;
+	int student_random;
+	int course_random;
+	int friend_random;
+}Randomseed;
+
+typedef struct UniversityRandomseedTuple{
+	vector<University > university_array;
+	Randomseed randomseed;
+
+}UniversityRandomseedTuple;
+
+class Parser{
+public:
+	string fileRead(const char*);
+	University makeUniversity(string);
+	UniversityRandomseedTuple separteUniversities(string);
+	void print(UniversityRandomseedTuple);
+	UniversityRandomseedTuple setEnvironment(const char*);
+
+};
+
+#endif /* PARSER_H_ */

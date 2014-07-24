@@ -1,0 +1,101 @@
+\hypertarget{classNetwork}{\section{\-Network \-Class \-Reference}
+\label{classNetwork}\index{\-Network@{\-Network}}
+}
+
+
+\-Exposes various functions to the other modules.  
+
+
+
+
+{\ttfamily \#include $<$network.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNetwork_af1d5854ff8e43d83623af7703ca95264}{void {\bfseries add\-Node} (\hyperlink{structGraphNode}{\-Graph\-Node} $\ast$)}\label{classNetwork_af1d5854ff8e43d83623af7703ca95264}
+
+\item 
+\hypertarget{classNetwork_a0981eb57d7ecb023f0abb63f5d9824e3}{void {\bfseries make\-Friends} (\hyperlink{structGraphNode}{\-Graph\-Node} $\ast$, \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$)}\label{classNetwork_a0981eb57d7ecb023f0abb63f5d9824e3}
+
+\item 
+void \hyperlink{classNetwork_a8db93fc8e447bbc3ae3b0cd3b2e2ec1a}{generate\-Graph} (vector$<$ \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$ $>$, vector$<$ \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$ $>$)
+\begin{DoxyCompactList}\small\item\em \-It generates the graph into graph\-M\-L format. \end{DoxyCompactList}\item 
+\hypertarget{classNetwork_ae41b3c47c626a6a9774068efdb538999}{bool {\bfseries is\-Student} (\hyperlink{structGraphNode}{\-Graph\-Node})}\label{classNetwork_ae41b3c47c626a6a9774068efdb538999}
+
+\item 
+\hypertarget{classNetwork_a55b751fab14d4709d35c70e73363f7ba}{bool {\bfseries is\-Faculty} (\hyperlink{structGraphNode}{\-Graph\-Node})}\label{classNetwork_a55b751fab14d4709d35c70e73363f7ba}
+
+\item 
+\hypertarget{classNetwork_a455876eaf519fad1d86b702a438b1580}{vector$<$ \-Interest $\ast$ $>$ {\bfseries give\-Interests} (\hyperlink{structGraphNode}{\-Graph\-Node})}\label{classNetwork_a455876eaf519fad1d86b702a438b1580}
+
+\item 
+\hypertarget{classNetwork_a31c6946733fcb571d9952b5c165abcc8}{\-Department $\ast$ {\bfseries give\-Department} (\hyperlink{structGraphNode}{\-Graph\-Node})}\label{classNetwork_a31c6946733fcb571d9952b5c165abcc8}
+
+\item 
+\hypertarget{classNetwork_a3acd7cd5049f7cc0230dda97c522e661}{string {\bfseries give\-Name} (\hyperlink{structGraphNode}{\-Graph\-Node})}\label{classNetwork_a3acd7cd5049f7cc0230dda97c522e661}
+
+\item 
+\hypertarget{classNetwork_aa943e2481ec6446a0fe187582cf46b95}{string {\bfseries entry\-Number} (\hyperlink{structGraphNode}{\-Graph\-Node})}\label{classNetwork_aa943e2481ec6446a0fe187582cf46b95}
+
+\item 
+\hypertarget{classNetwork_ae04bd23796ff43aa597be1ec25916ecf}{string {\bfseries employee\-Code} (\hyperlink{structGraphNode}{\-Graph\-Node})}\label{classNetwork_ae04bd23796ff43aa597be1ec25916ecf}
+
+\item 
+\hypertarget{classNetwork_af9e37d2248af4ed8fea0ee19646ad33b}{string {\bfseries give\-Hostel\-Name} (\hyperlink{structGraphNode}{\-Graph\-Node})}\label{classNetwork_af9e37d2248af4ed8fea0ee19646ad33b}
+
+\item 
+\hypertarget{classNetwork_a82bf90cb48f73d49d897052537b282d4}{string {\bfseries give\-House\-Name} (\hyperlink{structGraphNode}{\-Graph\-Node})}\label{classNetwork_a82bf90cb48f73d49d897052537b282d4}
+
+\item 
+\hypertarget{classNetwork_a2064f77060d8fca15e040b79a64dc038}{int {\bfseries give\-House\-Number} (\hyperlink{structGraphNode}{\-Graph\-Node})}\label{classNetwork_a2064f77060d8fca15e040b79a64dc038}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$ $>$ \hyperlink{classNetwork_a7bffe601dfdb5b2cd82d9a8c02dc258b}{student\-\_\-list}
+\item 
+\hypertarget{classNetwork_a341de1a02ee3721d1730e5fdc6a18292}{vector$<$ \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$ $>$ {\bfseries faculty\-\_\-list}}\label{classNetwork_a341de1a02ee3721d1730e5fdc6a18292}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Exposes various functions to the other modules. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classNetwork_a8db93fc8e447bbc3ae3b0cd3b2e2ec1a}{\index{\-Network@{\-Network}!generate\-Graph@{generate\-Graph}}
+\index{generate\-Graph@{generate\-Graph}!Network@{\-Network}}
+\subsubsection[{generate\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-::generate\-Graph} (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf \-Graph\-Node} $\ast$ $>$}]{a, }
+\item[{vector$<$ {\bf \-Graph\-Node} $\ast$ $>$}]{b}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_a8db93fc8e447bbc3ae3b0cd3b2e2ec1a}
+
+
+\-It generates the graph into graph\-M\-L format. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em vector$<$\-Graph\-Node$\ast$$>$} & \-The vector containing all the faculties. \\
+\hline
+{\em vector$<$\-Graph\-Node$\ast$$>$} & \-The vector containing all the students. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void 
+\end{DoxyReturn}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classNetwork_a7bffe601dfdb5b2cd82d9a8c02dc258b}{\index{\-Network@{\-Network}!student\-\_\-list@{student\-\_\-list}}
+\index{student\-\_\-list@{student\-\_\-list}!Network@{\-Network}}
+\subsubsection[{student\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \-Graph\-Node}$\ast$$>$ {\bf \-Network\-::student\-\_\-list}}}\label{classNetwork_a7bffe601dfdb5b2cd82d9a8c02dc258b}
+\-List of the students and faculty nodes generated by the threads 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+network.\-h\item 
+\hyperlink{network_8cpp}{network.\-cpp}\end{DoxyCompactItemize}

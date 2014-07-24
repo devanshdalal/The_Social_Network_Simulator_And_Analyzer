@@ -1,0 +1,745 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 94.46      0.17     0.17        1   170.03   170.03  Algorithms::FloydWarshall()
+  5.56      0.18     0.01     1651     0.01     0.01  std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_check_len(unsigned long, char const*) const
+  0.00      0.18     0.00    29882     0.00     0.00  std::vector<GraphNode*, std::allocator<GraphNode*> >::operator[](unsigned long)
+  0.00      0.18     0.00    16511     0.00     0.00  std::_Iter_base<GraphNode**, false>::_S_base(GraphNode**)
+  0.00      0.18     0.00    13073     0.00     0.00  std::vector<GraphNode*, std::allocator<GraphNode*> >::size() const
+  0.00      0.18     0.00     9907     0.00     0.00  std::_Niter_base<GraphNode**>::iterator_type std::__niter_base<GraphNode**>(GraphNode**)
+  0.00      0.18     0.00     8126     0.00     0.00  __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::base() const
+  0.00      0.18     0.00     6604     0.00     0.00  std::_Miter_base<GraphNode**>::iterator_type std::__miter_base<GraphNode**>(GraphNode**)
+  0.00      0.18     0.00     6159     0.00     0.00  __gnu_cxx::new_allocator<GraphNode*>::construct(GraphNode**, GraphNode* const&)
+  0.00      0.18     0.00     6159     0.00     0.00  std::vector<GraphNode*, std::allocator<GraphNode*> >::push_back(GraphNode* const&)
+  0.00      0.18     0.00     6159     0.00     0.00  operator new(unsigned long, void*)
+  0.00      0.18     0.00     5262     0.00     0.00  std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_get_Tp_allocator()
+  0.00      0.18     0.00     5129     0.00     0.00  __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::__normal_iterator(GraphNode** const&)
+  0.00      0.18     0.00     4954     0.00     0.00  __gnu_cxx::new_allocator<GraphNode*>::max_size() const
+  0.00      0.18     0.00     3607     0.00     0.00  GraphNode** std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<GraphNode*>(GraphNode* const*, GraphNode* const*, GraphNode**)
+  0.00      0.18     0.00     3606     0.00     0.00  GraphNode** std::__copy_move_a<false, GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**)
+  0.00      0.18     0.00     3302     0.00     0.00  std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_get_Tp_allocator() const
+  0.00      0.18     0.00     3302     0.00     0.00  std::vector<GraphNode*, std::allocator<GraphNode*> >::max_size() const
+  0.00      0.18     0.00     3302     0.00     0.00  GraphNode** std::__uninitialized_copy<true>::__uninit_copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**)
+  0.00      0.18     0.00     3302     0.00     0.00  GraphNode** std::__copy_move_a2<false, GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**)
+  0.00      0.18     0.00     3302     0.00     0.00  GraphNode** std::uninitialized_copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**)
+  0.00      0.18     0.00     3302     0.00     0.00  GraphNode** std::__uninitialized_copy_a<GraphNode**, GraphNode**, GraphNode*>(GraphNode**, GraphNode**, GraphNode**, std::allocator<GraphNode*>&)
+  0.00      0.18     0.00     3302     0.00     0.00  GraphNode** std::__uninitialized_move_a<GraphNode**, GraphNode**, std::allocator<GraphNode*> >(GraphNode**, GraphNode**, GraphNode**, std::allocator<GraphNode*>&)
+  0.00      0.18     0.00     3302     0.00     0.00  GraphNode** std::copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**)
+  0.00      0.18     0.00     3244     0.00     0.00  std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*)
+  0.00      0.18     0.00     3243     0.00     0.00  std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00      0.18     0.00     2260     0.00     0.00  std::vector<GraphNode*, std::allocator<GraphNode*> >::end()
+  0.00      0.18     0.00     1959     0.00     0.00  void std::_Destroy_aux<true>::__destroy<GraphNode**>(GraphNode**, GraphNode**)
+  0.00      0.18     0.00     1959     0.00     0.00  std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_deallocate(GraphNode**, unsigned long)
+  0.00      0.18     0.00     1959     0.00     0.00  void std::_Destroy<GraphNode**>(GraphNode**, GraphNode**)
+  0.00      0.18     0.00     1959     0.00     0.00  void std::_Destroy<GraphNode**, GraphNode*>(GraphNode**, GraphNode**, std::allocator<GraphNode*>&)
+  0.00      0.18     0.00     1956     0.00     0.00  std::vector<GraphNode*, std::allocator<GraphNode*> >::begin()
+  0.00      0.18     0.00     1652     0.00     0.00  __gnu_cxx::new_allocator<GraphNode*>::deallocate(GraphNode**, unsigned long)
+  0.00      0.18     0.00     1652     0.00     0.00  __gnu_cxx::new_allocator<GraphNode*>::allocate(unsigned long, void const*)
+  0.00      0.18     0.00     1652     0.00     0.00  std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_allocate(unsigned long)
+  0.00      0.18     0.00     1651     0.00     0.00  __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::difference_type __gnu_cxx::operator-<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&)
+  0.00      0.18     0.00     1651     0.00     0.01  std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode* const&)
+  0.00      0.18     0.00     1651     0.00     0.00  unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  0.00      0.18     0.00      912     0.00     0.00  std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, true>::_S_base(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  0.00      0.18     0.00      912     0.00     0.00  std::_Niter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__niter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  0.00      0.18     0.00      609     0.00     0.00  __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::operator+(long const&) const
+  0.00      0.18     0.00      608     0.00     0.00  std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, false>::_S_base(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  0.00      0.18     0.00      608     0.00     0.00  std::_Miter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__miter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  0.00      0.18     0.00      307     0.00     0.00  __gnu_cxx::new_allocator<GraphNode*>::new_allocator()
+  0.00      0.18     0.00      307     0.00     0.00  __gnu_cxx::new_allocator<GraphNode*>::~new_allocator()
+  0.00      0.18     0.00      307     0.00     0.00  std::allocator<GraphNode*>::allocator()
+  0.00      0.18     0.00      307     0.00     0.00  std::allocator<GraphNode*>::~allocator()
+  0.00      0.18     0.00      307     0.00     0.00  std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_Vector_impl::_Vector_impl()
+  0.00      0.18     0.00      307     0.00     0.00  std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_Vector_impl::~_Vector_impl()
+  0.00      0.18     0.00      307     0.00     0.00  std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_Vector_base()
+  0.00      0.18     0.00      307     0.00     0.00  std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::~_Vector_base()
+  0.00      0.18     0.00      307     0.00     0.00  std::vector<GraphNode*, std::allocator<GraphNode*> >::vector()
+  0.00      0.18     0.00      306     0.00     0.00  std::vector<GraphNode*, std::allocator<GraphNode*> >::~vector()
+  0.00      0.18     0.00      305     0.00     0.00  GraphNode::GraphNode()
+  0.00      0.18     0.00      305     0.00     0.00  GraphNode::~GraphNode()
+  0.00      0.18     0.00      305     0.00     0.00  __gnu_cxx::new_allocator<GraphNode*>::destroy(GraphNode**)
+  0.00      0.18     0.00      305     0.00     0.00  bool __gnu_cxx::operator!=<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&)
+  0.00      0.18     0.00      305     0.00     0.00  std::vector<GraphNode*, std::allocator<GraphNode*> >::erase(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  0.00      0.18     0.00      304     0.00     0.00  __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  0.00      0.18     0.00      304     0.00     0.00  __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > std::copy<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  0.00      0.18     0.00        4     0.00     0.00  __gnu_cxx::__normal_iterator<char const*, std::string>::base() const
+  0.00      0.18     0.00        2     0.00     0.00  sendToGyani()
+  0.00      0.18     0.00        2     0.00     0.00  recieveFromGyani()
+  0.00      0.18     0.00        2     0.00     0.00  __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >::__normal_iterator(GraphNode* const* const&)
+  0.00      0.18     0.00        2     0.00     0.00  __gnu_cxx::__normal_iterator<char const*, std::string>::operator++()
+  0.00      0.18     0.00        2     0.00     0.00  bool __gnu_cxx::operator!=<char const*, std::string>(__gnu_cxx::__normal_iterator<char const*, std::string> const&, __gnu_cxx::__normal_iterator<char const*, std::string> const&)
+  0.00      0.18     0.00        2     0.00     0.00  __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >::base() const
+  0.00      0.18     0.00        2     0.00     0.00  __gnu_cxx::__normal_iterator<char const*, std::string>::operator*() const
+  0.00      0.18     0.00        2     0.00     0.00  std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, false>::_S_base(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  0.00      0.18     0.00        2     0.00     0.00  std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, true>::_S_base(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  0.00      0.18     0.00        2     0.00     0.00  std::_Miter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__miter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  0.00      0.18     0.00        2     0.00     0.00  std::_Niter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__niter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  0.00      0.18     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN7Network11makeFriendsEP9GraphNodeS1_
+  0.00      0.18     0.00        1     0.00     0.00  _GLOBAL__sub_I_out
+  0.00      0.18     0.00        1     0.00     0.00  _GLOBAL__sub_I_threads
+  0.00      0.18     0.00        1     0.00     0.00  caseInsensitiveStringCompare(std::string const&, std::string const&)
+  0.00      0.18     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.18     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.18     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.18     0.00        1     0.00     0.00  Algorithms::findByID(std::string)
+  0.00      0.18     0.00        1     0.00    10.00  Network::readGraph()
+  0.00      0.18     0.00        1     0.00     0.00  __gnu_cxx::new_allocator<std::_Rb_tree_node<GraphNode*> >::new_allocator()
+  0.00      0.18     0.00        1     0.00     0.00  __gnu_cxx::new_allocator<std::_Rb_tree_node<GraphNode*> >::~new_allocator()
+  0.00      0.18     0.00        1     0.00     0.00  std::vector<GraphNode*, std::allocator<GraphNode*> >::end() const
+  0.00      0.18     0.00        1     0.00     0.00  std::vector<GraphNode*, std::allocator<GraphNode*> >::begin() const
+  0.00      0.18     0.00        1     0.00     0.00  std::vector<GraphNode*, std::allocator<GraphNode*> >::capacity() const
+  0.00      0.18     0.00        1     0.00     0.00  std::allocator<std::_Rb_tree_node<GraphNode*> >::allocator()
+  0.00      0.18     0.00        1     0.00     0.00  std::allocator<std::_Rb_tree_node<GraphNode*> >::~allocator()
+  0.00      0.18     0.00        1     0.00     0.00  GraphNode** std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**)
+  0.00      0.18     0.00        1     0.00     0.00  std::set<GraphNode*, std::less<GraphNode*>, std::allocator<GraphNode*> >::set()
+  0.00      0.18     0.00        1     0.00     0.00  GraphNode** std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(unsigned long, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  0.00      0.18     0.00        1     0.00     0.00  std::vector<GraphNode*, std::allocator<GraphNode*> >::operator=(std::vector<GraphNode*, std::allocator<GraphNode*> > const&)
+  0.00      0.18     0.00        1     0.00     0.00  std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree_impl<std::less<GraphNode*>, false>::_M_initialize()
+  0.00      0.18     0.00        1     0.00     0.00  std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree_impl<std::less<GraphNode*>, false>::_Rb_tree_impl()
+  0.00      0.18     0.00        1     0.00     0.00  std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree_impl<std::less<GraphNode*>, false>::~_Rb_tree_impl()
+  0.00      0.18     0.00        1     0.00     0.00  std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_M_begin()
+  0.00      0.18     0.00        1     0.00     0.00  std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_M_erase(std::_Rb_tree_node<GraphNode*>*)
+  0.00      0.18     0.00        1     0.00     0.00  std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree()
+  0.00      0.18     0.00        1     0.00     0.00  std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::~_Rb_tree()
+  0.00      0.18     0.00        1     0.00     0.00  GraphNode** std::__copy_move_a<false, GraphNode* const*, GraphNode**>(GraphNode* const*, GraphNode* const*, GraphNode**)
+  0.00      0.18     0.00        1     0.00     0.00  GraphNode** std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**)
+  0.00      0.18     0.00        1     0.00     0.00  GraphNode** std::uninitialized_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**)
+  0.00      0.18     0.00        1     0.00     0.00  GraphNode** std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**, GraphNode*>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**, std::allocator<GraphNode*>&)
+  0.00      0.18     0.00        1     0.00     0.00  GraphNode** std::copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**)
+  0.00      0.18     0.00        1     0.00     0.00  std::operator|(std::_Ios_Openmode, std::_Ios_Openmode)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 5.55% of 0.18 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.00    0.18                 cppMain(void*) [1]
+                0.17    0.00       1/1           Algorithms::FloydWarshall() [2]
+                0.00    0.01       1/1           Network::readGraph() [6]
+                0.00    0.00       1/1           std::vector<GraphNode*, std::allocator<GraphNode*> >::operator=(std::vector<GraphNode*, std::allocator<GraphNode*> > const&) [98]
+                0.00    0.00       1/306         std::vector<GraphNode*, std::allocator<GraphNode*> >::~vector() [60]
+                0.00    0.00       1/13073       std::vector<GraphNode*, std::allocator<GraphNode*> >::size() const [14]
+-----------------------------------------------
+                0.17    0.00       1/1           cppMain(void*) [1]
+[2]     94.4    0.17    0.00       1         Algorithms::FloydWarshall() [2]
+                0.00    0.00   17867/29882       std::vector<GraphNode*, std::allocator<GraphNode*> >::operator[](unsigned long) [12]
+                0.00    0.00    6159/13073       std::vector<GraphNode*, std::allocator<GraphNode*> >::size() const [14]
+-----------------------------------------------
+                0.00    0.01    6159/6159        Network::readGraph() [6]
+[3]      5.6    0.00    0.01    6159         std::vector<GraphNode*, std::allocator<GraphNode*> >::push_back(GraphNode* const&) [3]
+                0.00    0.01    1651/1651        std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode* const&) [5]
+                0.00    0.00    4508/6159        __gnu_cxx::new_allocator<GraphNode*>::construct(GraphNode**, GraphNode* const&) [18]
+                0.00    0.00    1651/2260        std::vector<GraphNode*, std::allocator<GraphNode*> >::end() [35]
+-----------------------------------------------
+                0.01    0.00    1651/1651        std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode* const&) [5]
+[4]      5.6    0.01    0.00    1651         std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_check_len(unsigned long, char const*) const [4]
+                0.00    0.00    6604/13073       std::vector<GraphNode*, std::allocator<GraphNode*> >::size() const [14]
+                0.00    0.00    3302/3302        std::vector<GraphNode*, std::allocator<GraphNode*> >::max_size() const [26]
+                0.00    0.00    1651/1651        unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [45]
+-----------------------------------------------
+                0.00    0.01    1651/1651        std::vector<GraphNode*, std::allocator<GraphNode*> >::push_back(GraphNode* const&) [3]
+[5]      5.6    0.00    0.01    1651         std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode* const&) [5]
+                0.01    0.00    1651/1651        std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_check_len(unsigned long, char const*) const [4]
+                0.00    0.00    4953/5262        std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_get_Tp_allocator() [20]
+                0.00    0.00    3302/8126        __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::base() const [16]
+                0.00    0.00    3302/3302        GraphNode** std::__uninitialized_move_a<GraphNode**, GraphNode**, std::allocator<GraphNode*> >(GraphNode**, GraphNode**, GraphNode**, std::allocator<GraphNode*>&) [31]
+                0.00    0.00    1651/1956        std::vector<GraphNode*, std::allocator<GraphNode*> >::begin() [40]
+                0.00    0.00    1651/1651        __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::difference_type __gnu_cxx::operator-<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&) [44]
+                0.00    0.00    1651/1652        std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_allocate(unsigned long) [43]
+                0.00    0.00    1651/6159        __gnu_cxx::new_allocator<GraphNode*>::construct(GraphNode**, GraphNode* const&) [18]
+                0.00    0.00    1651/1959        void std::_Destroy<GraphNode**, GraphNode*>(GraphNode**, GraphNode**, std::allocator<GraphNode*>&) [39]
+                0.00    0.00    1651/1959        std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_deallocate(GraphNode**, unsigned long) [37]
+-----------------------------------------------
+                0.00    0.01       1/1           cppMain(void*) [1]
+[6]      5.6    0.00    0.01       1         Network::readGraph() [6]
+                0.00    0.01    6159/6159        std::vector<GraphNode*, std::allocator<GraphNode*> >::push_back(GraphNode* const&) [3]
+                0.00    0.00   11708/29882       std::vector<GraphNode*, std::allocator<GraphNode*> >::operator[](unsigned long) [12]
+                0.00    0.00    3244/3244        std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) [33]
+                0.00    0.00    3243/3243        std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [34]
+                0.00    0.00     305/305         GraphNode::GraphNode() [61]
+                0.00    0.00       1/307         std::vector<GraphNode*, std::allocator<GraphNode*> >::vector() [59]
+-----------------------------------------------
+                0.00    0.00       2/29882       Algorithms::findByID(std::string) [87]
+                0.00    0.00     305/29882       main [11]
+                0.00    0.00   11708/29882       Network::readGraph() [6]
+                0.00    0.00   17867/29882       Algorithms::FloydWarshall() [2]
+[12]     0.0    0.00    0.00   29882         std::vector<GraphNode*, std::allocator<GraphNode*> >::operator[](unsigned long) [12]
+-----------------------------------------------
+                0.00    0.00    6604/16511       std::_Miter_base<GraphNode**>::iterator_type std::__miter_base<GraphNode**>(GraphNode**) [17]
+                0.00    0.00    9907/16511       std::_Niter_base<GraphNode**>::iterator_type std::__niter_base<GraphNode**>(GraphNode**) [15]
+[13]     0.0    0.00    0.00   16511         std::_Iter_base<GraphNode**, false>::_S_base(GraphNode**) [13]
+-----------------------------------------------
+                0.00    0.00       1/13073       cppMain(void*) [1]
+                0.00    0.00       1/13073       std::vector<GraphNode*, std::allocator<GraphNode*> >::operator=(std::vector<GraphNode*, std::allocator<GraphNode*> > const&) [98]
+                0.00    0.00       2/13073       Algorithms::findByID(std::string) [87]
+                0.00    0.00     306/13073       main [11]
+                0.00    0.00    6159/13073       Algorithms::FloydWarshall() [2]
+                0.00    0.00    6604/13073       std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_check_len(unsigned long, char const*) const [4]
+[14]     0.0    0.00    0.00   13073         std::vector<GraphNode*, std::allocator<GraphNode*> >::size() const [14]
+-----------------------------------------------
+                0.00    0.00       1/9907        GraphNode** std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [107]
+                0.00    0.00    9906/9907        GraphNode** std::__copy_move_a2<false, GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [28]
+[15]     0.0    0.00    0.00    9907         std::_Niter_base<GraphNode**>::iterator_type std::__niter_base<GraphNode**>(GraphNode**) [15]
+                0.00    0.00    9907/16511       std::_Iter_base<GraphNode**, false>::_S_base(GraphNode**) [13]
+-----------------------------------------------
+                0.00    0.00     610/8126        bool __gnu_cxx::operator!=<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&) [64]
+                0.00    0.00     912/8126        std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, true>::_S_base(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [46]
+                0.00    0.00    3302/8126        std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode* const&) [5]
+                0.00    0.00    3302/8126        __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::difference_type __gnu_cxx::operator-<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&) [44]
+[16]     0.0    0.00    0.00    8126         __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::base() const [16]
+-----------------------------------------------
+                0.00    0.00    6604/6604        GraphNode** std::copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [32]
+[17]     0.0    0.00    0.00    6604         std::_Miter_base<GraphNode**>::iterator_type std::__miter_base<GraphNode**>(GraphNode**) [17]
+                0.00    0.00    6604/16511       std::_Iter_base<GraphNode**, false>::_S_base(GraphNode**) [13]
+-----------------------------------------------
+                0.00    0.00    1651/6159        std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode* const&) [5]
+                0.00    0.00    4508/6159        std::vector<GraphNode*, std::allocator<GraphNode*> >::push_back(GraphNode* const&) [3]
+[18]     0.0    0.00    0.00    6159         __gnu_cxx::new_allocator<GraphNode*>::construct(GraphNode**, GraphNode* const&) [18]
+                0.00    0.00    6159/6159        operator new(unsigned long, void*) [19]
+-----------------------------------------------
+                0.00    0.00    6159/6159        __gnu_cxx::new_allocator<GraphNode*>::construct(GraphNode**, GraphNode* const&) [18]
+[19]     0.0    0.00    0.00    6159         operator new(unsigned long, void*) [19]
+-----------------------------------------------
+                0.00    0.00       1/5262        std::vector<GraphNode*, std::allocator<GraphNode*> >::operator=(std::vector<GraphNode*, std::allocator<GraphNode*> > const&) [98]
+                0.00    0.00       1/5262        GraphNode** std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(unsigned long, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [97]
+                0.00    0.00     307/5262        std::vector<GraphNode*, std::allocator<GraphNode*> >::~vector() [60]
+                0.00    0.00    4953/5262        std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode* const&) [5]
+[20]     0.0    0.00    0.00    5262         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_get_Tp_allocator() [20]
+-----------------------------------------------
+                0.00    0.00     304/5129        __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [66]
+                0.00    0.00     609/5129        __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::operator+(long const&) const [48]
+                0.00    0.00    1956/5129        std::vector<GraphNode*, std::allocator<GraphNode*> >::begin() [40]
+                0.00    0.00    2260/5129        std::vector<GraphNode*, std::allocator<GraphNode*> >::end() [35]
+[21]     0.0    0.00    0.00    5129         __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::__normal_iterator(GraphNode** const&) [21]
+-----------------------------------------------
+                0.00    0.00    1652/4954        __gnu_cxx::new_allocator<GraphNode*>::allocate(unsigned long, void const*) [42]
+                0.00    0.00    3302/4954        std::vector<GraphNode*, std::allocator<GraphNode*> >::max_size() const [26]
+[22]     0.0    0.00    0.00    4954         __gnu_cxx::new_allocator<GraphNode*>::max_size() const [22]
+-----------------------------------------------
+                0.00    0.00       1/3607        GraphNode** std::__copy_move_a<false, GraphNode* const*, GraphNode**>(GraphNode* const*, GraphNode* const*, GraphNode**) [106]
+                0.00    0.00    3606/3607        GraphNode** std::__copy_move_a<false, GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [24]
+[23]     0.0    0.00    0.00    3607         GraphNode** std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<GraphNode*>(GraphNode* const*, GraphNode* const*, GraphNode**) [23]
+-----------------------------------------------
+                0.00    0.00     304/3606        __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [66]
+                0.00    0.00    3302/3606        GraphNode** std::__copy_move_a2<false, GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [28]
+[24]     0.0    0.00    0.00    3606         GraphNode** std::__copy_move_a<false, GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [24]
+                0.00    0.00    3606/3607        GraphNode** std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<GraphNode*>(GraphNode* const*, GraphNode* const*, GraphNode**) [23]
+-----------------------------------------------
+                0.00    0.00    3302/3302        std::vector<GraphNode*, std::allocator<GraphNode*> >::max_size() const [26]
+[25]     0.0    0.00    0.00    3302         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_get_Tp_allocator() const [25]
+-----------------------------------------------
+                0.00    0.00    3302/3302        std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_check_len(unsigned long, char const*) const [4]
+[26]     0.0    0.00    0.00    3302         std::vector<GraphNode*, std::allocator<GraphNode*> >::max_size() const [26]
+                0.00    0.00    3302/3302        std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_get_Tp_allocator() const [25]
+                0.00    0.00    3302/4954        __gnu_cxx::new_allocator<GraphNode*>::max_size() const [22]
+-----------------------------------------------
+                0.00    0.00    3302/3302        GraphNode** std::uninitialized_copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [29]
+[27]     0.0    0.00    0.00    3302         GraphNode** std::__uninitialized_copy<true>::__uninit_copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [27]
+                0.00    0.00    3302/3302        GraphNode** std::copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [32]
+-----------------------------------------------
+                0.00    0.00    3302/3302        GraphNode** std::copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [32]
+[28]     0.0    0.00    0.00    3302         GraphNode** std::__copy_move_a2<false, GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [28]
+                0.00    0.00    9906/9907        std::_Niter_base<GraphNode**>::iterator_type std::__niter_base<GraphNode**>(GraphNode**) [15]
+                0.00    0.00    3302/3606        GraphNode** std::__copy_move_a<false, GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [24]
+-----------------------------------------------
+                0.00    0.00    3302/3302        GraphNode** std::__uninitialized_copy_a<GraphNode**, GraphNode**, GraphNode*>(GraphNode**, GraphNode**, GraphNode**, std::allocator<GraphNode*>&) [30]
+[29]     0.0    0.00    0.00    3302         GraphNode** std::uninitialized_copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [29]
+                0.00    0.00    3302/3302        GraphNode** std::__uninitialized_copy<true>::__uninit_copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [27]
+-----------------------------------------------
+                0.00    0.00    3302/3302        GraphNode** std::__uninitialized_move_a<GraphNode**, GraphNode**, std::allocator<GraphNode*> >(GraphNode**, GraphNode**, GraphNode**, std::allocator<GraphNode*>&) [31]
+[30]     0.0    0.00    0.00    3302         GraphNode** std::__uninitialized_copy_a<GraphNode**, GraphNode**, GraphNode*>(GraphNode**, GraphNode**, GraphNode**, std::allocator<GraphNode*>&) [30]
+                0.00    0.00    3302/3302        GraphNode** std::uninitialized_copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [29]
+-----------------------------------------------
+                0.00    0.00    3302/3302        std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode* const&) [5]
+[31]     0.0    0.00    0.00    3302         GraphNode** std::__uninitialized_move_a<GraphNode**, GraphNode**, std::allocator<GraphNode*> >(GraphNode**, GraphNode**, GraphNode**, std::allocator<GraphNode*>&) [31]
+                0.00    0.00    3302/3302        GraphNode** std::__uninitialized_copy_a<GraphNode**, GraphNode**, GraphNode*>(GraphNode**, GraphNode**, GraphNode**, std::allocator<GraphNode*>&) [30]
+-----------------------------------------------
+                0.00    0.00    3302/3302        GraphNode** std::__uninitialized_copy<true>::__uninit_copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [27]
+[32]     0.0    0.00    0.00    3302         GraphNode** std::copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [32]
+                0.00    0.00    6604/6604        std::_Miter_base<GraphNode**>::iterator_type std::__miter_base<GraphNode**>(GraphNode**) [17]
+                0.00    0.00    3302/3302        GraphNode** std::__copy_move_a2<false, GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [28]
+-----------------------------------------------
+                0.00    0.00    3244/3244        Network::readGraph() [6]
+[33]     0.0    0.00    0.00    3244         std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) [33]
+-----------------------------------------------
+                0.00    0.00    3243/3243        Network::readGraph() [6]
+[34]     0.0    0.00    0.00    3243         std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [34]
+-----------------------------------------------
+                0.00    0.00     609/2260        std::vector<GraphNode*, std::allocator<GraphNode*> >::erase(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [65]
+                0.00    0.00    1651/2260        std::vector<GraphNode*, std::allocator<GraphNode*> >::push_back(GraphNode* const&) [3]
+[35]     0.0    0.00    0.00    2260         std::vector<GraphNode*, std::allocator<GraphNode*> >::end() [35]
+                0.00    0.00    2260/5129        __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::__normal_iterator(GraphNode** const&) [21]
+-----------------------------------------------
+                0.00    0.00    1959/1959        void std::_Destroy<GraphNode**>(GraphNode**, GraphNode**) [38]
+[36]     0.0    0.00    0.00    1959         void std::_Destroy_aux<true>::__destroy<GraphNode**>(GraphNode**, GraphNode**) [36]
+-----------------------------------------------
+                0.00    0.00       1/1959        std::vector<GraphNode*, std::allocator<GraphNode*> >::operator=(std::vector<GraphNode*, std::allocator<GraphNode*> > const&) [98]
+                0.00    0.00     307/1959        std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::~_Vector_base() [58]
+                0.00    0.00    1651/1959        std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode* const&) [5]
+[37]     0.0    0.00    0.00    1959         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_deallocate(GraphNode**, unsigned long) [37]
+                0.00    0.00    1652/1652        __gnu_cxx::new_allocator<GraphNode*>::deallocate(GraphNode**, unsigned long) [41]
+-----------------------------------------------
+                0.00    0.00    1959/1959        void std::_Destroy<GraphNode**, GraphNode*>(GraphNode**, GraphNode**, std::allocator<GraphNode*>&) [39]
+[38]     0.0    0.00    0.00    1959         void std::_Destroy<GraphNode**>(GraphNode**, GraphNode**) [38]
+                0.00    0.00    1959/1959        void std::_Destroy_aux<true>::__destroy<GraphNode**>(GraphNode**, GraphNode**) [36]
+-----------------------------------------------
+                0.00    0.00       1/1959        std::vector<GraphNode*, std::allocator<GraphNode*> >::operator=(std::vector<GraphNode*, std::allocator<GraphNode*> > const&) [98]
+                0.00    0.00     307/1959        std::vector<GraphNode*, std::allocator<GraphNode*> >::~vector() [60]
+                0.00    0.00    1651/1959        std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode* const&) [5]
+[39]     0.0    0.00    0.00    1959         void std::_Destroy<GraphNode**, GraphNode*>(GraphNode**, GraphNode**, std::allocator<GraphNode*>&) [39]
+                0.00    0.00    1959/1959        void std::_Destroy<GraphNode**>(GraphNode**, GraphNode**) [38]
+-----------------------------------------------
+                0.00    0.00     305/1956        main [11]
+                0.00    0.00    1651/1956        std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode* const&) [5]
+[40]     0.0    0.00    0.00    1956         std::vector<GraphNode*, std::allocator<GraphNode*> >::begin() [40]
+                0.00    0.00    1956/5129        __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::__normal_iterator(GraphNode** const&) [21]
+-----------------------------------------------
+                0.00    0.00    1652/1652        std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_deallocate(GraphNode**, unsigned long) [37]
+[41]     0.0    0.00    0.00    1652         __gnu_cxx::new_allocator<GraphNode*>::deallocate(GraphNode**, unsigned long) [41]
+-----------------------------------------------
+                0.00    0.00    1652/1652        std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_allocate(unsigned long) [43]
+[42]     0.0    0.00    0.00    1652         __gnu_cxx::new_allocator<GraphNode*>::allocate(unsigned long, void const*) [42]
+                0.00    0.00    1652/4954        __gnu_cxx::new_allocator<GraphNode*>::max_size() const [22]
+-----------------------------------------------
+                0.00    0.00       1/1652        GraphNode** std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(unsigned long, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [97]
+                0.00    0.00    1651/1652        std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode* const&) [5]
+[43]     0.0    0.00    0.00    1652         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_allocate(unsigned long) [43]
+                0.00    0.00    1652/1652        __gnu_cxx::new_allocator<GraphNode*>::allocate(unsigned long, void const*) [42]
+-----------------------------------------------
+                0.00    0.00    1651/1651        std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode* const&) [5]
+[44]     0.0    0.00    0.00    1651         __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::difference_type __gnu_cxx::operator-<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&) [44]
+                0.00    0.00    3302/8126        __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::base() const [16]
+-----------------------------------------------
+                0.00    0.00    1651/1651        std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_check_len(unsigned long, char const*) const [4]
+[45]     0.0    0.00    0.00    1651         unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [45]
+-----------------------------------------------
+                0.00    0.00     912/912         std::_Niter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__niter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [47]
+[46]     0.0    0.00    0.00     912         std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, true>::_S_base(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [46]
+                0.00    0.00     912/8126        __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::base() const [16]
+-----------------------------------------------
+                0.00    0.00     912/912         __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [66]
+[47]     0.0    0.00    0.00     912         std::_Niter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__niter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [47]
+                0.00    0.00     912/912         std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, true>::_S_base(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [46]
+-----------------------------------------------
+                0.00    0.00     609/609         std::vector<GraphNode*, std::allocator<GraphNode*> >::erase(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [65]
+[48]     0.0    0.00    0.00     609         __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::operator+(long const&) const [48]
+                0.00    0.00     609/5129        __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::__normal_iterator(GraphNode** const&) [21]
+-----------------------------------------------
+                0.00    0.00     608/608         std::_Miter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__miter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [50]
+[49]     0.0    0.00    0.00     608         std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, false>::_S_base(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [49]
+-----------------------------------------------
+                0.00    0.00     608/608         __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > std::copy<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [67]
+[50]     0.0    0.00    0.00     608         std::_Miter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__miter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [50]
+                0.00    0.00     608/608         std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, false>::_S_base(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [49]
+-----------------------------------------------
+                0.00    0.00     307/307         std::allocator<GraphNode*>::allocator() [53]
+[51]     0.0    0.00    0.00     307         __gnu_cxx::new_allocator<GraphNode*>::new_allocator() [51]
+-----------------------------------------------
+                0.00    0.00     307/307         std::allocator<GraphNode*>::~allocator() [54]
+[52]     0.0    0.00    0.00     307         __gnu_cxx::new_allocator<GraphNode*>::~new_allocator() [52]
+-----------------------------------------------
+                0.00    0.00     307/307         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_Vector_impl::_Vector_impl() [55]
+[53]     0.0    0.00    0.00     307         std::allocator<GraphNode*>::allocator() [53]
+                0.00    0.00     307/307         __gnu_cxx::new_allocator<GraphNode*>::new_allocator() [51]
+-----------------------------------------------
+                0.00    0.00     307/307         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_Vector_impl::~_Vector_impl() [56]
+[54]     0.0    0.00    0.00     307         std::allocator<GraphNode*>::~allocator() [54]
+                0.00    0.00     307/307         __gnu_cxx::new_allocator<GraphNode*>::~new_allocator() [52]
+-----------------------------------------------
+                0.00    0.00     307/307         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_Vector_base() [57]
+[55]     0.0    0.00    0.00     307         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_Vector_impl::_Vector_impl() [55]
+                0.00    0.00     307/307         std::allocator<GraphNode*>::allocator() [53]
+-----------------------------------------------
+                0.00    0.00     307/307         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::~_Vector_base() [58]
+[56]     0.0    0.00    0.00     307         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_Vector_impl::~_Vector_impl() [56]
+                0.00    0.00     307/307         std::allocator<GraphNode*>::~allocator() [54]
+-----------------------------------------------
+                0.00    0.00     307/307         std::vector<GraphNode*, std::allocator<GraphNode*> >::vector() [59]
+[57]     0.0    0.00    0.00     307         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_Vector_base() [57]
+                0.00    0.00     307/307         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_Vector_impl::_Vector_impl() [55]
+-----------------------------------------------
+                0.00    0.00     307/307         std::vector<GraphNode*, std::allocator<GraphNode*> >::~vector() [60]
+[58]     0.0    0.00    0.00     307         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::~_Vector_base() [58]
+                0.00    0.00     307/1959        std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_deallocate(GraphNode**, unsigned long) [37]
+                0.00    0.00     307/307         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_Vector_impl::~_Vector_impl() [56]
+-----------------------------------------------
+                0.00    0.00       1/307         __static_initialization_and_destruction_0(int, int) [84]
+                0.00    0.00       1/307         Network::readGraph() [6]
+                0.00    0.00     305/307         GraphNode::GraphNode() [61]
+[59]     0.0    0.00    0.00     307         std::vector<GraphNode*, std::allocator<GraphNode*> >::vector() [59]
+                0.00    0.00     307/307         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_Vector_base() [57]
+-----------------------------------------------
+                0.00    0.00       1/306         cppMain(void*) [1]
+                0.00    0.00     305/306         GraphNode::~GraphNode() [62]
+[60]     0.0    0.00    0.00     306         std::vector<GraphNode*, std::allocator<GraphNode*> >::~vector() [60]
+                0.00    0.00     307/5262        std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_get_Tp_allocator() [20]
+                0.00    0.00     307/1959        void std::_Destroy<GraphNode**, GraphNode*>(GraphNode**, GraphNode**, std::allocator<GraphNode*>&) [39]
+                0.00    0.00     307/307         std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::~_Vector_base() [58]
+-----------------------------------------------
+                0.00    0.00     305/305         Network::readGraph() [6]
+[61]     0.0    0.00    0.00     305         GraphNode::GraphNode() [61]
+                0.00    0.00     305/307         std::vector<GraphNode*, std::allocator<GraphNode*> >::vector() [59]
+-----------------------------------------------
+                0.00    0.00     305/305         main [11]
+[62]     0.0    0.00    0.00     305         GraphNode::~GraphNode() [62]
+                0.00    0.00     305/306         std::vector<GraphNode*, std::allocator<GraphNode*> >::~vector() [60]
+-----------------------------------------------
+                0.00    0.00     305/305         std::vector<GraphNode*, std::allocator<GraphNode*> >::erase(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [65]
+[63]     0.0    0.00    0.00     305         __gnu_cxx::new_allocator<GraphNode*>::destroy(GraphNode**) [63]
+-----------------------------------------------
+                0.00    0.00     305/305         std::vector<GraphNode*, std::allocator<GraphNode*> >::erase(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [65]
+[64]     0.0    0.00    0.00     305         bool __gnu_cxx::operator!=<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&) [64]
+                0.00    0.00     610/8126        __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::base() const [16]
+-----------------------------------------------
+                0.00    0.00     305/305         main [11]
+[65]     0.0    0.00    0.00     305         std::vector<GraphNode*, std::allocator<GraphNode*> >::erase(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [65]
+                0.00    0.00     609/2260        std::vector<GraphNode*, std::allocator<GraphNode*> >::end() [35]
+                0.00    0.00     609/609         __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::operator+(long const&) const [48]
+                0.00    0.00     305/305         bool __gnu_cxx::operator!=<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&) [64]
+                0.00    0.00     305/305         __gnu_cxx::new_allocator<GraphNode*>::destroy(GraphNode**) [63]
+                0.00    0.00     304/304         __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > std::copy<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [67]
+-----------------------------------------------
+                0.00    0.00     304/304         __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > std::copy<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [67]
+[66]     0.0    0.00    0.00     304         __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [66]
+                0.00    0.00     912/912         std::_Niter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__niter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [47]
+                0.00    0.00     304/3606        GraphNode** std::__copy_move_a<false, GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [24]
+                0.00    0.00     304/5129        __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::__normal_iterator(GraphNode** const&) [21]
+-----------------------------------------------
+                0.00    0.00     304/304         std::vector<GraphNode*, std::allocator<GraphNode*> >::erase(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [65]
+[67]     0.0    0.00    0.00     304         __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > std::copy<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [67]
+                0.00    0.00     608/608         std::_Miter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__miter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [50]
+                0.00    0.00     304/304         __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [66]
+-----------------------------------------------
+                0.00    0.00       4/4           bool __gnu_cxx::operator!=<char const*, std::string>(__gnu_cxx::__normal_iterator<char const*, std::string> const&, __gnu_cxx::__normal_iterator<char const*, std::string> const&) [73]
+[68]     0.0    0.00    0.00       4         __gnu_cxx::__normal_iterator<char const*, std::string>::base() const [68]
+-----------------------------------------------
+                0.00    0.00       1/2           loadFn(void*) [112]
+                0.00    0.00       1/2           main [11]
+[69]     0.0    0.00    0.00       2         sendToGyani() [69]
+-----------------------------------------------
+                0.00    0.00       2/2           main [11]
+[70]     0.0    0.00    0.00       2         recieveFromGyani() [70]
+-----------------------------------------------
+                0.00    0.00       1/2           std::vector<GraphNode*, std::allocator<GraphNode*> >::begin() const [91]
+                0.00    0.00       1/2           std::vector<GraphNode*, std::allocator<GraphNode*> >::end() const [90]
+[71]     0.0    0.00    0.00       2         __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >::__normal_iterator(GraphNode* const* const&) [71]
+-----------------------------------------------
+                0.00    0.00       2/2           caseInsensitiveStringCompare(std::string const&, std::string const&) [83]
+[72]     0.0    0.00    0.00       2         __gnu_cxx::__normal_iterator<char const*, std::string>::operator++() [72]
+-----------------------------------------------
+                0.00    0.00       2/2           caseInsensitiveStringCompare(std::string const&, std::string const&) [83]
+[73]     0.0    0.00    0.00       2         bool __gnu_cxx::operator!=<char const*, std::string>(__gnu_cxx::__normal_iterator<char const*, std::string> const&, __gnu_cxx::__normal_iterator<char const*, std::string> const&) [73]
+                0.00    0.00       4/4           __gnu_cxx::__normal_iterator<char const*, std::string>::base() const [68]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, true>::_S_base(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [77]
+[74]     0.0    0.00    0.00       2         __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >::base() const [74]
+-----------------------------------------------
+                0.00    0.00       2/2           caseInsensitiveStringCompare(std::string const&, std::string const&) [83]
+[75]     0.0    0.00    0.00       2         __gnu_cxx::__normal_iterator<char const*, std::string>::operator*() const [75]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Miter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__miter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [78]
+[76]     0.0    0.00    0.00       2         std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, false>::_S_base(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [76]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Niter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__niter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [79]
+[77]     0.0    0.00    0.00       2         std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, true>::_S_base(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [77]
+                0.00    0.00       2/2           __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >::base() const [74]
+-----------------------------------------------
+                0.00    0.00       2/2           GraphNode** std::copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [110]
+[78]     0.0    0.00    0.00       2         std::_Miter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__miter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [78]
+                0.00    0.00       2/2           std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, false>::_S_base(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [76]
+-----------------------------------------------
+                0.00    0.00       2/2           GraphNode** std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [107]
+[79]     0.0    0.00    0.00       2         std::_Niter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__niter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [79]
+                0.00    0.00       2/2           std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, true>::_S_base(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [77]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [381]
+[80]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN7Network11makeFriendsEP9GraphNodeS1_ [80]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [85]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [381]
+[81]     0.0    0.00    0.00       1         _GLOBAL__sub_I_out [81]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [86]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [381]
+[82]     0.0    0.00    0.00       1         _GLOBAL__sub_I_threads [82]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [84]
+-----------------------------------------------
+                0.00    0.00       1/1           Algorithms::findByID(std::string) [87]
+[83]     0.0    0.00    0.00       1         caseInsensitiveStringCompare(std::string const&, std::string const&) [83]
+                0.00    0.00       2/2           __gnu_cxx::__normal_iterator<char const*, std::string>::operator*() const [75]
+                0.00    0.00       2/2           __gnu_cxx::__normal_iterator<char const*, std::string>::operator++() [72]
+                0.00    0.00       2/2           bool __gnu_cxx::operator!=<char const*, std::string>(__gnu_cxx::__normal_iterator<char const*, std::string> const&, __gnu_cxx::__normal_iterator<char const*, std::string> const&) [73]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_threads [82]
+[84]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [84]
+                0.00    0.00       1/307         std::vector<GraphNode*, std::allocator<GraphNode*> >::vector() [59]
+                0.00    0.00       1/1           std::set<GraphNode*, std::less<GraphNode*>, std::allocator<GraphNode*> >::set() [96]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__ZN7Network11makeFriendsEP9GraphNodeS1_ [80]
+[85]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [85]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_out [81]
+[86]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [86]
+                0.00    0.00       1/1           std::operator|(std::_Ios_Openmode, std::_Ios_Openmode) [111]
+-----------------------------------------------
+                0.00    0.00       1/1           main [11]
+[87]     0.0    0.00    0.00       1         Algorithms::findByID(std::string) [87]
+                0.00    0.00       2/13073       std::vector<GraphNode*, std::allocator<GraphNode*> >::size() const [14]
+                0.00    0.00       2/29882       std::vector<GraphNode*, std::allocator<GraphNode*> >::operator[](unsigned long) [12]
+                0.00    0.00       1/1           caseInsensitiveStringCompare(std::string const&, std::string const&) [83]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator<std::_Rb_tree_node<GraphNode*> >::allocator() [93]
+[88]     0.0    0.00    0.00       1         __gnu_cxx::new_allocator<std::_Rb_tree_node<GraphNode*> >::new_allocator() [88]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator<std::_Rb_tree_node<GraphNode*> >::~allocator() [94]
+[89]     0.0    0.00    0.00       1         __gnu_cxx::new_allocator<std::_Rb_tree_node<GraphNode*> >::~new_allocator() [89]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<GraphNode*, std::allocator<GraphNode*> >::operator=(std::vector<GraphNode*, std::allocator<GraphNode*> > const&) [98]
+[90]     0.0    0.00    0.00       1         std::vector<GraphNode*, std::allocator<GraphNode*> >::end() const [90]
+                0.00    0.00       1/2           __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >::__normal_iterator(GraphNode* const* const&) [71]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<GraphNode*, std::allocator<GraphNode*> >::operator=(std::vector<GraphNode*, std::allocator<GraphNode*> > const&) [98]
+[91]     0.0    0.00    0.00       1         std::vector<GraphNode*, std::allocator<GraphNode*> >::begin() const [91]
+                0.00    0.00       1/2           __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >::__normal_iterator(GraphNode* const* const&) [71]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<GraphNode*, std::allocator<GraphNode*> >::operator=(std::vector<GraphNode*, std::allocator<GraphNode*> > const&) [98]
+[92]     0.0    0.00    0.00       1         std::vector<GraphNode*, std::allocator<GraphNode*> >::capacity() const [92]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree_impl<std::less<GraphNode*>, false>::_Rb_tree_impl() [100]
+[93]     0.0    0.00    0.00       1         std::allocator<std::_Rb_tree_node<GraphNode*> >::allocator() [93]
+                0.00    0.00       1/1           __gnu_cxx::new_allocator<std::_Rb_tree_node<GraphNode*> >::new_allocator() [88]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree_impl<std::less<GraphNode*>, false>::~_Rb_tree_impl() [101]
+[94]     0.0    0.00    0.00       1         std::allocator<std::_Rb_tree_node<GraphNode*> >::~allocator() [94]
+                0.00    0.00       1/1           __gnu_cxx::new_allocator<std::_Rb_tree_node<GraphNode*> >::~new_allocator() [89]
+-----------------------------------------------
+                0.00    0.00       1/1           GraphNode** std::uninitialized_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [108]
+[95]     0.0    0.00    0.00       1         GraphNode** std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [95]
+                0.00    0.00       1/1           GraphNode** std::copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [110]
+-----------------------------------------------
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [84]
+[96]     0.0    0.00    0.00       1         std::set<GraphNode*, std::less<GraphNode*>, std::allocator<GraphNode*> >::set() [96]
+                0.00    0.00       1/1           std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree() [104]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<GraphNode*, std::allocator<GraphNode*> >::operator=(std::vector<GraphNode*, std::allocator<GraphNode*> > const&) [98]
+[97]     0.0    0.00    0.00       1         GraphNode** std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(unsigned long, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [97]
+                0.00    0.00       1/1652        std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_allocate(unsigned long) [43]
+                0.00    0.00       1/5262        std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_get_Tp_allocator() [20]
+                0.00    0.00       1/1           GraphNode** std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**, GraphNode*>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**, std::allocator<GraphNode*>&) [109]
+-----------------------------------------------
+                0.00    0.00       1/1           cppMain(void*) [1]
+[98]     0.0    0.00    0.00       1         std::vector<GraphNode*, std::allocator<GraphNode*> >::operator=(std::vector<GraphNode*, std::allocator<GraphNode*> > const&) [98]
+                0.00    0.00       1/13073       std::vector<GraphNode*, std::allocator<GraphNode*> >::size() const [14]
+                0.00    0.00       1/1           std::vector<GraphNode*, std::allocator<GraphNode*> >::capacity() const [92]
+                0.00    0.00       1/1           std::vector<GraphNode*, std::allocator<GraphNode*> >::end() const [90]
+                0.00    0.00       1/1           std::vector<GraphNode*, std::allocator<GraphNode*> >::begin() const [91]
+                0.00    0.00       1/1           GraphNode** std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(unsigned long, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [97]
+                0.00    0.00       1/5262        std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_get_Tp_allocator() [20]
+                0.00    0.00       1/1959        void std::_Destroy<GraphNode**, GraphNode*>(GraphNode**, GraphNode**, std::allocator<GraphNode*>&) [39]
+                0.00    0.00       1/1959        std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_deallocate(GraphNode**, unsigned long) [37]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree_impl<std::less<GraphNode*>, false>::_Rb_tree_impl() [100]
+[99]     0.0    0.00    0.00       1         std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree_impl<std::less<GraphNode*>, false>::_M_initialize() [99]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree() [104]
+[100]    0.0    0.00    0.00       1         std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree_impl<std::less<GraphNode*>, false>::_Rb_tree_impl() [100]
+                0.00    0.00       1/1           std::allocator<std::_Rb_tree_node<GraphNode*> >::allocator() [93]
+                0.00    0.00       1/1           std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree_impl<std::less<GraphNode*>, false>::_M_initialize() [99]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::~_Rb_tree() [105]
+[101]    0.0    0.00    0.00       1         std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree_impl<std::less<GraphNode*>, false>::~_Rb_tree_impl() [101]
+                0.00    0.00       1/1           std::allocator<std::_Rb_tree_node<GraphNode*> >::~allocator() [94]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::~_Rb_tree() [105]
+[102]    0.0    0.00    0.00       1         std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_M_begin() [102]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::~_Rb_tree() [105]
+[103]    0.0    0.00    0.00       1         std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_M_erase(std::_Rb_tree_node<GraphNode*>*) [103]
+-----------------------------------------------
+                0.00    0.00       1/1           std::set<GraphNode*, std::less<GraphNode*>, std::allocator<GraphNode*> >::set() [96]
+[104]    0.0    0.00    0.00       1         std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree() [104]
+                0.00    0.00       1/1           std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree_impl<std::less<GraphNode*>, false>::_Rb_tree_impl() [100]
+-----------------------------------------------
+                0.00    0.00       1/1           std::set<GraphNode*, std::less<GraphNode*>, std::allocator<GraphNode*> >::~set() [265]
+[105]    0.0    0.00    0.00       1         std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::~_Rb_tree() [105]
+                0.00    0.00       1/1           std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_M_begin() [102]
+                0.00    0.00       1/1           std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_M_erase(std::_Rb_tree_node<GraphNode*>*) [103]
+                0.00    0.00       1/1           std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree_impl<std::less<GraphNode*>, false>::~_Rb_tree_impl() [101]
+-----------------------------------------------
+                0.00    0.00       1/1           GraphNode** std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [107]
+[106]    0.0    0.00    0.00       1         GraphNode** std::__copy_move_a<false, GraphNode* const*, GraphNode**>(GraphNode* const*, GraphNode* const*, GraphNode**) [106]
+                0.00    0.00       1/3607        GraphNode** std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<GraphNode*>(GraphNode* const*, GraphNode* const*, GraphNode**) [23]
+-----------------------------------------------
+                0.00    0.00       1/1           GraphNode** std::copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [110]
+[107]    0.0    0.00    0.00       1         GraphNode** std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [107]
+                0.00    0.00       2/2           std::_Niter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__niter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [79]
+                0.00    0.00       1/9907        std::_Niter_base<GraphNode**>::iterator_type std::__niter_base<GraphNode**>(GraphNode**) [15]
+                0.00    0.00       1/1           GraphNode** std::__copy_move_a<false, GraphNode* const*, GraphNode**>(GraphNode* const*, GraphNode* const*, GraphNode**) [106]
+-----------------------------------------------
+                0.00    0.00       1/1           GraphNode** std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**, GraphNode*>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**, std::allocator<GraphNode*>&) [109]
+[108]    0.0    0.00    0.00       1         GraphNode** std::uninitialized_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [108]
+                0.00    0.00       1/1           GraphNode** std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [95]
+-----------------------------------------------
+                0.00    0.00       1/1           GraphNode** std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(unsigned long, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [97]
+[109]    0.0    0.00    0.00       1         GraphNode** std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**, GraphNode*>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**, std::allocator<GraphNode*>&) [109]
+                0.00    0.00       1/1           GraphNode** std::uninitialized_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [108]
+-----------------------------------------------
+                0.00    0.00       1/1           GraphNode** std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [95]
+[110]    0.0    0.00    0.00       1         GraphNode** std::copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [110]
+                0.00    0.00       2/2           std::_Miter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__miter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [78]
+                0.00    0.00       1/1           GraphNode** std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [107]
+-----------------------------------------------
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [86]
+[111]    0.0    0.00    0.00       1         std::operator|(std::_Ios_Openmode, std::_Ios_Openmode) [111]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+
+Index by function name
+
+  [80] _GLOBAL__sub_I__ZN7Network11makeFriendsEP9GraphNodeS1_ [4] std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_check_len(unsigned long, char const*) const [98] std::vector<GraphNode*, std::allocator<GraphNode*> >::operator=(std::vector<GraphNode*, std::allocator<GraphNode*> > const&)
+  [81] _GLOBAL__sub_I_out     [90] std::vector<GraphNode*, std::allocator<GraphNode*> >::end() const [12] std::vector<GraphNode*, std::allocator<GraphNode*> >::operator[](unsigned long)
+  [82] _GLOBAL__sub_I_threads [14] std::vector<GraphNode*, std::allocator<GraphNode*> >::size() const [99] std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree_impl<std::less<GraphNode*>, false>::_M_initialize()
+  [69] sendToGyani()          [91] std::vector<GraphNode*, std::allocator<GraphNode*> >::begin() const [100] std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree_impl<std::less<GraphNode*>, false>::_Rb_tree_impl()
+  [70] recieveFromGyani()     [92] std::vector<GraphNode*, std::allocator<GraphNode*> >::capacity() const [101] std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree_impl<std::less<GraphNode*>, false>::~_Rb_tree_impl()
+  [83] caseInsensitiveStringCompare(std::string const&, std::string const&) [26] std::vector<GraphNode*, std::allocator<GraphNode*> >::max_size() const [102] std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_M_begin()
+  [84] __static_initialization_and_destruction_0(int, int) [53] std::allocator<GraphNode*>::allocator() [103] std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_M_erase(std::_Rb_tree_node<GraphNode*>*)
+  [85] __static_initialization_and_destruction_0(int, int) [54] std::allocator<GraphNode*>::~allocator() [104] std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::_Rb_tree()
+  [86] __static_initialization_and_destruction_0(int, int) [93] std::allocator<std::_Rb_tree_node<GraphNode*> >::allocator() [105] std::_Rb_tree<GraphNode*, GraphNode*, std::_Identity<GraphNode*>, std::less<GraphNode*>, std::allocator<GraphNode*> >::~_Rb_tree()
+   [2] Algorithms::FloydWarshall() [94] std::allocator<std::_Rb_tree_node<GraphNode*> >::~allocator() [78] std::_Miter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__miter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  [87] Algorithms::findByID(std::string) [76] std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, false>::_S_base(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [50] std::_Miter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__miter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+   [6] Network::readGraph()   [77] std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, true>::_S_base(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [17] std::_Miter_base<GraphNode**>::iterator_type std::__miter_base<GraphNode**>(GraphNode**)
+  [61] GraphNode::GraphNode() [49] std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, false>::_S_base(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [79] std::_Niter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__niter_base<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  [62] GraphNode::~GraphNode() [46] std::_Iter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, true>::_S_base(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [47] std::_Niter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >::iterator_type std::__niter_base<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  [41] __gnu_cxx::new_allocator<GraphNode*>::deallocate(GraphNode**, unsigned long) [13] std::_Iter_base<GraphNode**, false>::_S_base(GraphNode**) [15] std::_Niter_base<GraphNode**>::iterator_type std::__niter_base<GraphNode**>(GraphNode**)
+  [63] __gnu_cxx::new_allocator<GraphNode*>::destroy(GraphNode**) [23] GraphNode** std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<GraphNode*>(GraphNode* const*, GraphNode* const*, GraphNode**) [106] GraphNode** std::__copy_move_a<false, GraphNode* const*, GraphNode**>(GraphNode* const*, GraphNode* const*, GraphNode**)
+  [42] __gnu_cxx::new_allocator<GraphNode*>::allocate(unsigned long, void const*) [36] void std::_Destroy_aux<true>::__destroy<GraphNode**>(GraphNode**, GraphNode**) [24] GraphNode** std::__copy_move_a<false, GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**)
+  [18] __gnu_cxx::new_allocator<GraphNode*>::construct(GraphNode**, GraphNode* const&) [43] std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_allocate(unsigned long) [107] GraphNode** std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**)
+  [51] __gnu_cxx::new_allocator<GraphNode*>::new_allocator() [55] std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_Vector_impl::_Vector_impl() [66] __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  [52] __gnu_cxx::new_allocator<GraphNode*>::~new_allocator() [56] std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_Vector_impl::~_Vector_impl() [28] GraphNode** std::__copy_move_a2<false, GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**)
+  [88] __gnu_cxx::new_allocator<std::_Rb_tree_node<GraphNode*> >::new_allocator() [37] std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_deallocate(GraphNode**, unsigned long) [108] GraphNode** std::uninitialized_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**)
+  [89] __gnu_cxx::new_allocator<std::_Rb_tree_node<GraphNode*> >::~new_allocator() [20] std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_get_Tp_allocator() [29] GraphNode** std::uninitialized_copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**)
+  [71] __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >::__normal_iterator(GraphNode* const* const&) [57] std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_Vector_base() [109] GraphNode** std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**, GraphNode*>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**, std::allocator<GraphNode*>&)
+  [72] __gnu_cxx::__normal_iterator<char const*, std::string>::operator++() [58] std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::~_Vector_base() [30] GraphNode** std::__uninitialized_copy_a<GraphNode**, GraphNode**, GraphNode*>(GraphNode**, GraphNode**, GraphNode**, std::allocator<GraphNode*>&)
+  [21] __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::__normal_iterator(GraphNode** const&) [95] GraphNode** std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**) [31] GraphNode** std::__uninitialized_move_a<GraphNode**, GraphNode**, std::allocator<GraphNode*> >(GraphNode**, GraphNode**, GraphNode**, std::allocator<GraphNode*>&)
+  [44] __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::difference_type __gnu_cxx::operator-<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&) [27] GraphNode** std::__uninitialized_copy<true>::__uninit_copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**) [45] unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  [73] bool __gnu_cxx::operator!=<char const*, std::string>(__gnu_cxx::__normal_iterator<char const*, std::string> const&, __gnu_cxx::__normal_iterator<char const*, std::string> const&) [96] std::set<GraphNode*, std::less<GraphNode*>, std::allocator<GraphNode*> >::set() [110] GraphNode** std::copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**>(__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode**)
+  [64] bool __gnu_cxx::operator!=<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > const&) [5] std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, GraphNode* const&) [67] __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > std::copy<__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >)
+  [22] __gnu_cxx::new_allocator<GraphNode*>::max_size() const [97] GraphNode** std::vector<GraphNode*, std::allocator<GraphNode*> >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > > >(unsigned long, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >, __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [32] GraphNode** std::copy<GraphNode**, GraphNode**>(GraphNode**, GraphNode**, GraphNode**)
+  [74] __gnu_cxx::__normal_iterator<GraphNode* const*, std::vector<GraphNode*, std::allocator<GraphNode*> > >::base() const [35] std::vector<GraphNode*, std::allocator<GraphNode*> >::end() [38] void std::_Destroy<GraphNode**>(GraphNode**, GraphNode**)
+  [68] __gnu_cxx::__normal_iterator<char const*, std::string>::base() const [40] std::vector<GraphNode*, std::allocator<GraphNode*> >::begin() [39] void std::_Destroy<GraphNode**, GraphNode*>(GraphNode**, GraphNode**, std::allocator<GraphNode*>&)
+  [75] __gnu_cxx::__normal_iterator<char const*, std::string>::operator*() const [65] std::vector<GraphNode*, std::allocator<GraphNode*> >::erase(__gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >) [111] std::operator|(std::_Ios_Openmode, std::_Ios_Openmode)
+  [16] __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::base() const [3] std::vector<GraphNode*, std::allocator<GraphNode*> >::push_back(GraphNode* const&) [33] std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*)
+  [48] __gnu_cxx::__normal_iterator<GraphNode**, std::vector<GraphNode*, std::allocator<GraphNode*> > >::operator+(long const&) const [59] std::vector<GraphNode*, std::allocator<GraphNode*> >::vector() [34] std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  [25] std::_Vector_base<GraphNode*, std::allocator<GraphNode*> >::_M_get_Tp_allocator() const [60] std::vector<GraphNode*, std::allocator<GraphNode*> >::~vector() [19] operator new(unsigned long, void*)

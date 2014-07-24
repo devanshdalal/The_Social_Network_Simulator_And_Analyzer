@@ -1,0 +1,137 @@
+\hypertarget{classGenerator}{\section{\-Generator \-Class \-Reference}
+\label{classGenerator}\index{\-Generator@{\-Generator}}
+}
+
+
+\-It contains all the generator threads as its functions.  
+
+
+
+
+{\ttfamily \#include $<$generator.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{classGenerator_a2b3944991462645d4867df8f6aeacdf2}{generate\-Faculty} (void $\ast$)
+\begin{DoxyCompactList}\small\item\em \-It generates all the faculty at the beginning of the simulation and fills a vector with objects of type \hyperlink{structGraphNode}{\-Graph\-Node} containing the data about that faculty. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{classGenerator_a5d06c31c1536ef87d72ef07b8ebc4d8e}{generate\-Student} (void $\ast$)
+\begin{DoxyCompactList}\small\item\em \-It generates all the students at proper time of the simulation and fills a vector with objects of type \hyperlink{structGraphNode}{\-Graph\-Node} containing the data about that student. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{classGenerator_ac3611f0e4174e593f355e19afde9516b}{generate\-Courses} (void $\ast$)
+\begin{DoxyCompactList}\small\item\em \-It generates all the courses at proper time of the simulation, clears the previously assigned courses to students and faculties and finally assigns the generated courses to students and faculties in the given manner. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{classGenerator_a09cf7c8e4504149a469f5caba0b97ac6}{generate\-Friends} (void $\ast$)
+\begin{DoxyCompactList}\small\item\em \-It generates the friends by sending requests between two randomly picked people generated till that time. \end{DoxyCompactList}\item 
+int \hyperlink{classGenerator_afbcd4685bdc0226c98d5dd708894ea22}{init} (const char $\ast$, int)
+\begin{DoxyCompactList}\small\item\em \-It initializes the generator process by first setting the environment from the input file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-It contains all the generator threads as its functions. 
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classGenerator_ac3611f0e4174e593f355e19afde9516b}{\index{\-Generator@{\-Generator}!generate\-Courses@{generate\-Courses}}
+\index{generate\-Courses@{generate\-Courses}!Generator@{\-Generator}}
+\subsubsection[{generate\-Courses}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ {\bf \-Generator\-::generate\-Courses} (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{threadid}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_ac3611f0e4174e593f355e19afde9516b}
+
+
+\-It generates all the courses at proper time of the simulation, clears the previously assigned courses to students and faculties and finally assigns the generated courses to students and faculties in the given manner. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em void$\ast$} & threadid \-Since this is a pthread, this parameter is required \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void$\ast$ \-Since this is a pthread, this return value is necessary 
+\end{DoxyReturn}
+\hypertarget{classGenerator_a2b3944991462645d4867df8f6aeacdf2}{\index{\-Generator@{\-Generator}!generate\-Faculty@{generate\-Faculty}}
+\index{generate\-Faculty@{generate\-Faculty}!Generator@{\-Generator}}
+\subsubsection[{generate\-Faculty}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ {\bf \-Generator\-::generate\-Faculty} (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{threadid}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_a2b3944991462645d4867df8f6aeacdf2}
+
+
+\-It generates all the faculty at the beginning of the simulation and fills a vector with objects of type \hyperlink{structGraphNode}{\-Graph\-Node} containing the data about that faculty. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em void$\ast$} & threadid \-Since this is a pthread, this parameter is required \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void$\ast$ \-Since this is a pthread, this return value is necessary 
+\end{DoxyReturn}
+\hypertarget{classGenerator_a09cf7c8e4504149a469f5caba0b97ac6}{\index{\-Generator@{\-Generator}!generate\-Friends@{generate\-Friends}}
+\index{generate\-Friends@{generate\-Friends}!Generator@{\-Generator}}
+\subsubsection[{generate\-Friends}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ {\bf \-Generator\-::generate\-Friends} (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{threadid}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_a09cf7c8e4504149a469f5caba0b97ac6}
+
+
+\-It generates the friends by sending requests between two randomly picked people generated till that time. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em void$\ast$} & threadid \-Since this is a pthread, this parameter is required \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void$\ast$ \-Since this is a pthread, this return value is necessary 
+\end{DoxyReturn}
+\hypertarget{classGenerator_a5d06c31c1536ef87d72ef07b8ebc4d8e}{\index{\-Generator@{\-Generator}!generate\-Student@{generate\-Student}}
+\index{generate\-Student@{generate\-Student}!Generator@{\-Generator}}
+\subsubsection[{generate\-Student}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ {\bf \-Generator\-::generate\-Student} (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{threadid}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_a5d06c31c1536ef87d72ef07b8ebc4d8e}
+
+
+\-It generates all the students at proper time of the simulation and fills a vector with objects of type \hyperlink{structGraphNode}{\-Graph\-Node} containing the data about that student. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em void$\ast$} & threadid \-Since this is a pthread, this parameter is required \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void$\ast$ \-Since this is a pthread, this return value is necessary 
+\end{DoxyReturn}
+\hypertarget{classGenerator_afbcd4685bdc0226c98d5dd708894ea22}{\index{\-Generator@{\-Generator}!init@{init}}
+\index{init@{init}!Generator@{\-Generator}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Generator\-::init} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{int}]{q}
+\end{DoxyParamCaption}
+)}}\label{classGenerator_afbcd4685bdc0226c98d5dd708894ea22}
+
+
+\-It initializes the generator process by first setting the environment from the input file. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & number of days for simulation \\
+\hline
+{\em const} & char$\ast$ name of the input file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int returns 0 on successful completion. 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+generator.\-h\item 
+\hyperlink{generator_8cpp}{generator.\-cpp}\end{DoxyCompactItemize}

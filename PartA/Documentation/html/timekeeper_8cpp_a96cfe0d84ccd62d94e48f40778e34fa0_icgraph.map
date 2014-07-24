@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$timekeeper_8cpp.html#a0df63fe5d63b6b8da8a66a1bf4121595" title="It accepts the requests from the generator and places them into the priority queue (request_array)..." alt="" coords="169,5,279,35"/>
+<area shape="rect" id="node5" href="$timekeeper_8cpp.html#ad1d49d8a37bd098c102548fdc5b40b5f" title="It starts the two threads, wakeUp() and acceptRequest()." alt="" coords="329,5,393,35"/>
+</map>

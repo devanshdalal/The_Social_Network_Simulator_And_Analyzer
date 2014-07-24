@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <iostream>
+#include <stdlib.h>
+#include <errno.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/msg.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Request{
+	long threadID;  //unique for message queue
+	long request_time;
+	
+	/* for threadID
+	 *1. generateFaculty
+	 *2. generateStudents
+	 *3. generateCourses
+	 *4. generateFriends
+ */
+
+};
+
+ struct WakeUp{
+	long threadID;  //unique for message queue
+	bool request_accepted; // whether the request send by the thread corresponding to the threadID is accepted.
+	long current_time;
+	
+	/* for threadID
+	 *1. generateFaculty
+	 *2. generateStudents
+	 *3. generateCourses
+	 *4. generateFriends
+ */
+
+};
+
+

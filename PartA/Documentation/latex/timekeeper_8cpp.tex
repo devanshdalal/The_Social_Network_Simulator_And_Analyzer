@@ -1,0 +1,171 @@
+\hypertarget{timekeeper_8cpp}{\section{timekeeper.\-cpp \-File \-Reference}
+\label{timekeeper_8cpp}\index{timekeeper.\-cpp@{timekeeper.\-cpp}}
+}
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include $<$vector$>$}\*
+{\ttfamily \#include $<$string$>$}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$algorithm$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$math.\-h$>$}\*
+{\ttfamily \#include $<$errno.\-h$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include $<$sys/types.\-h$>$}\*
+{\ttfamily \#include $<$sys/ipc.\-h$>$}\*
+{\ttfamily \#include $<$sys/msg.\-h$>$}\*
+{\ttfamily \#include $<$unistd.\-h$>$}\*
+{\ttfamily \#include \char`\"{}timekeeper.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}ipc.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}globals.\-h\char`\"{}}\*
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{timekeeper_8cpp_a68da1d1e3124a370f8b3e4ab3b4b51e8}{ofstream {\bfseries tiper} (\char`\"{}\-Part\-A/timekeeper.\-txt\char`\"{})}\label{timekeeper_8cpp_a68da1d1e3124a370f8b3e4ab3b4b51e8}
+
+\item 
+\hypertarget{timekeeper_8cpp_a65b2216bfdb420d95ab3317f6330266f}{bool {\bfseries compare} (\hyperlink{structRequest}{\-Request} a, \hyperlink{structRequest}{\-Request} b)}\label{timekeeper_8cpp_a65b2216bfdb420d95ab3317f6330266f}
+
+\item 
+\hyperlink{structRequest}{\-Request} \hyperlink{timekeeper_8cpp_a96cfe0d84ccd62d94e48f40778e34fa0}{recieve\-Request} ()
+\begin{DoxyCompactList}\small\item\em \-It accepts the requests from the generator threads and places the message into \hyperlink{structRequest}{\-Request} data structure. \end{DoxyCompactList}\item 
+void \hyperlink{timekeeper_8cpp_a115887b1b163205ae12cdaaa44a2ded4}{send\-Wake\-Up\-Call} (\hyperlink{structWakeUp}{\-Wake\-Up} struct\-\_\-to\-\_\-send)
+\begin{DoxyCompactList}\small\item\em \-It sends the wake up call to the generator threads via the message queue. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{timekeeper_8cpp_a0df63fe5d63b6b8da8a66a1bf4121595}{accept\-Request} (void $\ast$a)
+\begin{DoxyCompactList}\small\item\em \-It accepts the requests from the generator and places them into the priority queue (request\-\_\-array). \-It is a thread. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{timekeeper_8cpp_ad6865982dfe9d2c50736a8d5df5c2764}{wake\-Up} (void $\ast$i)
+\begin{DoxyCompactList}\small\item\em \-It sends the wakeup calls to the generator according to order in priority queue. \-It is a thread running parellel with the \hyperlink{timekeeper_8cpp_a0df63fe5d63b6b8da8a66a1bf4121595}{accept\-Request()} function. \end{DoxyCompactList}\item 
+\hypertarget{timekeeper_8cpp_a388f572c62279f839ee138a9afbdeeb5}{void {\bfseries print} ()}\label{timekeeper_8cpp_a388f572c62279f839ee138a9afbdeeb5}
+
+\item 
+int \hyperlink{timekeeper_8cpp_ad1d49d8a37bd098c102548fdc5b40b5f}{time\-Init} (int h)
+\begin{DoxyCompactList}\small\item\em \-It starts the two threads, \hyperlink{timekeeper_8cpp_ad6865982dfe9d2c50736a8d5df5c2764}{wake\-Up()} and \hyperlink{timekeeper_8cpp_a0df63fe5d63b6b8da8a66a1bf4121595}{accept\-Request()}. \end{DoxyCompactList}\item 
+\hypertarget{timekeeper_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{int {\bfseries main} (int argc, char $\ast$$\ast$argv)}\label{timekeeper_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{timekeeper_8cpp_ac73249cf7655af4936bdcc32388d0ee1}{pthread\-\_\-t {\bfseries time\-\_\-threads} \mbox{[}2\mbox{]}}\label{timekeeper_8cpp_ac73249cf7655af4936bdcc32388d0ee1}
+
+\item 
+\hypertarget{timekeeper_8cpp_a3b4964ecae799bc83402c92c060022d3}{long {\bfseries currenttime} = 0}\label{timekeeper_8cpp_a3b4964ecae799bc83402c92c060022d3}
+
+\item 
+vector$<$ \hyperlink{structRequest}{\-Request} $>$ \hyperlink{timekeeper_8cpp_a7dc0d14f02fa1f3c09190f24ce93f609}{request\-\_\-array}
+\item 
+\hypertarget{timekeeper_8cpp_ad25cf0c57d563e1b24e38b6fa1c711b2}{pthread\-\_\-mutex\-\_\-t {\bfseries request\-\_\-mutex} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{timekeeper_8cpp_ad25cf0c57d563e1b24e38b6fa1c711b2}
+
+\item 
+int \hyperlink{timekeeper_8cpp_a2bb76f07d45652d0e4b296991ec6ce8a}{days\-\_\-of\-\_\-simulation}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{timekeeper_8cpp_a0df63fe5d63b6b8da8a66a1bf4121595}{\index{timekeeper.\-cpp@{timekeeper.\-cpp}!accept\-Request@{accept\-Request}}
+\index{accept\-Request@{accept\-Request}!timekeeper.cpp@{timekeeper.\-cpp}}
+\subsubsection[{accept\-Request}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ {\bf accept\-Request} (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{timekeeper_8cpp_a0df63fe5d63b6b8da8a66a1bf4121595}
+
+
+\-It accepts the requests from the generator and places them into the priority queue (request\-\_\-array). \-It is a thread. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em void$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void$\ast$ 
+\end{DoxyReturn}
+\hypertarget{timekeeper_8cpp_a96cfe0d84ccd62d94e48f40778e34fa0}{\index{timekeeper.\-cpp@{timekeeper.\-cpp}!recieve\-Request@{recieve\-Request}}
+\index{recieve\-Request@{recieve\-Request}!timekeeper.cpp@{timekeeper.\-cpp}}
+\subsubsection[{recieve\-Request}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Request} {\bf recieve\-Request} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{timekeeper_8cpp_a96cfe0d84ccd62d94e48f40778e34fa0}
+
+
+\-It accepts the requests from the generator threads and places the message into \hyperlink{structRequest}{\-Request} data structure. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{structRequest}{\-Request} the recieved message 
+\end{DoxyReturn}
+\hypertarget{timekeeper_8cpp_a115887b1b163205ae12cdaaa44a2ded4}{\index{timekeeper.\-cpp@{timekeeper.\-cpp}!send\-Wake\-Up\-Call@{send\-Wake\-Up\-Call}}
+\index{send\-Wake\-Up\-Call@{send\-Wake\-Up\-Call}!timekeeper.cpp@{timekeeper.\-cpp}}
+\subsubsection[{send\-Wake\-Up\-Call}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf send\-Wake\-Up\-Call} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Wake\-Up}}]{struct\-\_\-to\-\_\-send}
+\end{DoxyParamCaption}
+)}}\label{timekeeper_8cpp_a115887b1b163205ae12cdaaa44a2ded4}
+
+
+\-It sends the wake up call to the generator threads via the message queue. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structWakeUp}{\-Wake\-Up}} & the message data structure to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{timekeeper_8cpp_ad1d49d8a37bd098c102548fdc5b40b5f}{\index{timekeeper.\-cpp@{timekeeper.\-cpp}!time\-Init@{time\-Init}}
+\index{time\-Init@{time\-Init}!timekeeper.cpp@{timekeeper.\-cpp}}
+\subsubsection[{time\-Init}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf time\-Init} (
+\begin{DoxyParamCaption}
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}}\label{timekeeper_8cpp_ad1d49d8a37bd098c102548fdc5b40b5f}
+
+
+\-It starts the two threads, \hyperlink{timekeeper_8cpp_ad6865982dfe9d2c50736a8d5df5c2764}{wake\-Up()} and \hyperlink{timekeeper_8cpp_a0df63fe5d63b6b8da8a66a1bf4121595}{accept\-Request()}. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & days of simulation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int returns 0 on succesfull completion 
+\end{DoxyReturn}
+\hypertarget{timekeeper_8cpp_ad6865982dfe9d2c50736a8d5df5c2764}{\index{timekeeper.\-cpp@{timekeeper.\-cpp}!wake\-Up@{wake\-Up}}
+\index{wake\-Up@{wake\-Up}!timekeeper.cpp@{timekeeper.\-cpp}}
+\subsubsection[{wake\-Up}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ {\bf wake\-Up} (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{i}
+\end{DoxyParamCaption}
+)}}\label{timekeeper_8cpp_ad6865982dfe9d2c50736a8d5df5c2764}
+
+
+\-It sends the wakeup calls to the generator according to order in priority queue. \-It is a thread running parellel with the \hyperlink{timekeeper_8cpp_a0df63fe5d63b6b8da8a66a1bf4121595}{accept\-Request()} function. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em void$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void$\ast$ 
+\end{DoxyReturn}
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{timekeeper_8cpp_a2bb76f07d45652d0e4b296991ec6ce8a}{\index{timekeeper.\-cpp@{timekeeper.\-cpp}!days\-\_\-of\-\_\-simulation@{days\-\_\-of\-\_\-simulation}}
+\index{days\-\_\-of\-\_\-simulation@{days\-\_\-of\-\_\-simulation}!timekeeper.cpp@{timekeeper.\-cpp}}
+\subsubsection[{days\-\_\-of\-\_\-simulation}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf days\-\_\-of\-\_\-simulation}}}\label{timekeeper_8cpp_a2bb76f07d45652d0e4b296991ec6ce8a}
+\-The days of simulation that the user gives as input \hypertarget{timekeeper_8cpp_a7dc0d14f02fa1f3c09190f24ce93f609}{\index{timekeeper.\-cpp@{timekeeper.\-cpp}!request\-\_\-array@{request\-\_\-array}}
+\index{request\-\_\-array@{request\-\_\-array}!timekeeper.cpp@{timekeeper.\-cpp}}
+\subsubsection[{request\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \-Request}$>$ {\bf request\-\_\-array}}}\label{timekeeper_8cpp_a7dc0d14f02fa1f3c09190f24ce93f609}
+\-The priority queue to maintain the requets into order of their time and thread\-I\-D 

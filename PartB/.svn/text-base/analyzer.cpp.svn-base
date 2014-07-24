@@ -1,0 +1,285 @@
+#include <stdio.h>
+#include <iostream>
+#include <stdlib.h>
+#include <errno.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/msg.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <signal.h>
+#include <sstream>
+#include <fstream>
+#include <cstring>
+#include <vector>
+#include <set>
+#include <stdlib.h>
+#include "network.h"
+#include "algorithms.h"
+#include <pthread.h>
+#define NUM_THREADS 2
+
+using namespace std;
+pthread_t threads[NUM_THREADS];   	// Array of threads
+
+struct query{
+	long ID;
+	char query_message[100];
+};
+struct queryCompleted{
+	long ID;
+	int isQueryCompleted;
+};
+
+
+bool finishedFloyed=false;
+
+Network network;
+Algorithms Search;
+
+vector<GraphNode*> G;
+int vertices;
+int ** D;
+set<GraphNode*> data;
+
+string recieveFromPerl(){
+	 query a;
+    int msqid;
+    key_t key = 123456;
+
+
+    if ((msqid = msgget(key, 0644)) == -1) { /* connect to the  "SAME" queue */
+	        perror("msgget");
+	        exit(1);
+    }
+    if (msgrcv(msqid, &a, sizeof(query)-sizeof(long), 1,0) == -1) {
+	    	perror("msgrcv");
+	    	exit(1);
+    }
+
+	//msgctl(msqid, IPC_RMID, NULL);
+	string ans(a.query_message);
+
+	return ans;
+
+}
+
+void sendToPerl(){
+	queryCompleted a;
+	a.ID = 2;
+	a.isQueryCompleted =1;
+
+	int msqid;
+	key_t key = 123456;
+
+
+    if ((msqid = msgget(key, 0644)) == -1) {
+        perror("error in msgget");
+        exit(1);
+    }
+
+    if (msgsnd(msqid, &a, 4, IPC_NOWAIT) == -1) {
+		perror("msgsnd");
+    }
+
+}
+
+void * cppMain(void* threadID){
+//		G = network.readGraph();
+//		network.generateGraph(G);
+		GraphNode* a1 = new GraphNode;
+		GraphNode* a2 = new GraphNode;
+		GraphNode* a3 = new GraphNode;
+		a1->name = "ss";
+		a2->name = "pp";
+		a3->name = "dd";
+		a1->entry_code = "01";
+		a2->entry_code = "02";
+		a3->entry_code = "03";
+		a1->number = 0;
+		a2->number = 1;
+		a3->number = 2;
+
+		a1->friend_list.push_back(a2);
+		a1->friend_list.push_back(a3);
+		a2->friend_list.push_back(a1);
+		a2->friend_list.push_back(a3);
+		a3->friend_list.push_back(a1);
+		a3->friend_list.push_back(a2);
+		G.push_back(a1);
+		G.push_back(a2);
+		G.push_back(a3);
+		vertices=G.size();
+		Search.FloydWarshall();    ///
+		//sleep(2);
+		finishedFloyed = true;
+		
+
+}
+
+void * loadFn(void * threaid){
+
+	cerr << "Processing";
+	while(finishedFloyed != true)
+	{
+		sleep(1);cerr<<".";
+		sleep(1);cerr<<".";
+		sleep(1);cerr<<".";
+		sleep(1);cerr<<".";
+		sleep(1);cerr<<".";
+		sleep(1);cerr<<".";
+		sleep(1);cerr << "\b\b\b\b\b\b\033[K";
+	}
+	cerr<<"\b\b\b\b\b\b\b\b\b\b\033[K";
+	sendToPerl();
+
+}
+
+
+int main(void)
+{
+	int rc;
+	rc=pthread_create(&threads[0], NULL, loadFn, NULL);
+	if(rc){
+		printf("Could not create thread\n");
+		exit(-1);
+	}
+	rc=pthread_create(&threads[1], NULL, cppMain , NULL);
+	if(rc){
+		printf("Could not create thread\n");
+		exit(-1);
+	}
+	pthread_join(threads[0], NULL);
+	pthread_join(threads[1], NULL);
+	
+
+	string query_message;
+	while (true){
+		query_message = recieveFromPerl();
+		if(query_message[0] == '7')
+			break;
+		//cout << "C++ :: I m processing your query "<<query_message<<endl;
+
+		char q_no = query_message[0];
+		if(q_no=='4'){
+			//The shortest path in the graph (between any pair of people)
+			// max D[i][j] matrix
+			int shortestPath=0;
+			for(int i=0; i<vertices; i++)
+				for(int j=0; j<vertices; j++)
+					if(shortestPath<D[i][j])
+						shortestPath=D[i][j];
+			if(shortestPath == vertices+1)
+				cout<<"Shortest path length: ∞"<<endl;
+			else
+				cout<<"Shortest path length: "<<shortestPath<<endl;
+		}
+		else
+		{
+			int iter = 2;
+			while(query_message[iter] != '!')
+				iter++;
+			string entry1 = query_message.substr(2,iter-2);
+			GraphNode * n1 =  Search.findByID(entry1),*n2;
+			int p1;
+			if(n1 != NULL)
+			{
+				p1 = n1->number;
+				int p2=0;
+				string entry2;
+				if(q_no!='1' && q_no!='5' && q_no!='6'){
+					entry2 = query_message.substr(iter+1,query_message.length()-iter-2);
+					n2 = Search.findByID(entry2);
+					if(n2 != NULL)
+						p2 = n2->number;
+					else{
+						cerr<<entry2<<" not found"<<endl;
+						goto exit;
+					}
+				}
+				if(q_no=='2' || q_no=='3')
+				{
+					if(p1==p2)
+					  cout<<"same persons!"<<endl;
+					else
+					{
+						if(q_no=='2')
+						{
+							cout<<"Shortest distance between "<<entry1<<" and "<< entry2<< " is " <<D[p1][p2]<<endl;
+						}
+						if(q_no=='3'){
+							string person1,person2;
+							n1=Search.findByID(entry1),n2=Search.findByID(entry2);
+							cout<<"Peoples on shortest path:";  //Use BFS
+							if(D[n1->number][n2->number] == vertices+1)
+								cout<<"There exist no path between "<<entry1<< " and "<< entry2<<endl;
+							else
+								Search.dijkstra(n2,n1);
+						}
+					}
+				}
+				else
+				{
+					if(q_no== '1'){
+						//Size of Clique of a given person (identified by university name and ID)
+						data.clear();
+						cout<<"clique size of "<<entry1 << " is " << Search.clique(data,n1,-1).size()+1<<endl;
+					}
+					if(q_no=='5'){
+						//cout<<Importance[p1]<<" is the importance number of "<<p1<<endl;
+						int importance=0;
+						for(int i=0; i<vertices; i++)
+							for(int j=i+1; j<vertices; j++)
+								if(D[i][j]==D[i][p1]+D[p1][j] && D[i][j]!=(vertices+1)){
+									importance++;
+								}
+						cout<<importance<<" is the importance number of "<<entry1<<endl;
+					}
+					if(q_no=='6'){
+						int importance=0;
+						for(int i=0; i<vertices; i++)
+							for(int j=i+1; j<vertices; j++)
+								if(D[i][j]==D[i][p1]+D[p1][j] && D[i][j]!=(vertices+1)){
+									importance++;
+								}
+						int ia;
+						for(ia=0; ia<G[p1]->friend_list.size();ia++){
+							cout<<G[p1]->friend_list[ia]->number<<endl;
+							int importance2=0;
+							for(int i=0; i<vertices; i++)
+								for(int j=i+1; j<vertices; j++)
+									if(D[i][j]==D[i][G[p1]->friend_list[ia]->number]+D[G[p1]->friend_list[ia]->number][j] && D[i][j]!=(vertices+1)){
+										importance2++;
+									}
+							if(importance < importance2){
+								cout<<"friend "<< G[p1]->friend_list[ia]->entry_code <<" has higher Importance number than "<< entry1<<endl;
+								break;
+							}
+						}
+						if(ia==G[p1]->friend_list.size())
+							cout<<entry1<<" has maximum importance among his friends"<<endl;
+					}
+				}
+			}
+			else{
+				cerr<<entry1<<" not found"<<endl;
+				goto exit;
+			}
+		}
+
+		exit:
+		//cout << "C++ :: I have completed your query" <<endl;
+		sendToPerl();
+
+
+	}
+	key_t key = 123456;
+	int msqid = msgget(key, 0644);
+	msgctl(msqid, IPC_RMID, NULL);
+   	kill(getppid(),9);
+	exit(getpid());
+	return 0;
+}
+

@@ -1,0 +1,168 @@
+\hypertarget{analyzer_8cpp}{\section{analyzer.\-cpp \-File \-Reference}
+\label{analyzer_8cpp}\index{analyzer.\-cpp@{analyzer.\-cpp}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$errno.\-h$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include $<$sys/types.\-h$>$}\*
+{\ttfamily \#include $<$sys/ipc.\-h$>$}\*
+{\ttfamily \#include $<$sys/msg.\-h$>$}\*
+{\ttfamily \#include $<$unistd.\-h$>$}\*
+{\ttfamily \#include $<$signal.\-h$>$}\*
+{\ttfamily \#include $<$sstream$>$}\*
+{\ttfamily \#include $<$fstream$>$}\*
+{\ttfamily \#include $<$cstring$>$}\*
+{\ttfamily \#include $<$vector$>$}\*
+{\ttfamily \#include $<$set$>$}\*
+{\ttfamily \#include \char`\"{}network.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}algorithms.\-h\char`\"{}}\*
+{\ttfamily \#include $<$pthread.\-h$>$}\*
+\-Include dependency graph for analyzer.\-cpp\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{analyzer_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structquery}{query}
+\begin{DoxyCompactList}\small\item\em \-The data structure that stores the message send by gyani. \end{DoxyCompactList}\item 
+struct \hyperlink{structqueryCompleted}{query\-Completed}
+\begin{DoxyCompactList}\small\item\em \-The data structure that is used for sending message to gyani when the requested query gets completed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{analyzer_8cpp_a7735206bdfad487588bba2126b806ab7}{\#define {\bfseries \-N\-U\-M\-\_\-\-T\-H\-R\-E\-A\-D\-S}~2}\label{analyzer_8cpp_a7735206bdfad487588bba2126b806ab7}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{analyzer_8cpp_ae71976109ab709345cdc6954ab534ebd}{recieve\-From\-Gyani} ()
+\begin{DoxyCompactList}\small\item\em \-It recievs the message from gyani. \end{DoxyCompactList}\item 
+void \hyperlink{analyzer_8cpp_abd3be662ae1729ef974fac49d488fddc}{send\-To\-Gyani} ()
+\begin{DoxyCompactList}\small\item\em \-It sends the completion message to gyani. \end{DoxyCompactList}\item 
+\hypertarget{analyzer_8cpp_a7297e814ebda7b629eac3b2d38ed325d}{void $\ast$ {\bfseries cpp\-Main} (void $\ast$thread\-I\-D)}\label{analyzer_8cpp_a7297e814ebda7b629eac3b2d38ed325d}
+
+\item 
+\hypertarget{analyzer_8cpp_afaf58f33e4d229eb960cc7a91d95d285}{void $\ast$ \hyperlink{analyzer_8cpp_afaf58f33e4d229eb960cc7a91d95d285}{load\-Fn} (void $\ast$threaid)}\label{analyzer_8cpp_afaf58f33e4d229eb960cc7a91d95d285}
+
+\begin{DoxyCompactList}\small\item\em \-The thread that displays the text \char`\"{}\-Processing...\char`\"{} in the terminal. \end{DoxyCompactList}\item 
+\hypertarget{analyzer_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{int \hyperlink{analyzer_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)}\label{analyzer_8cpp_a840291bc02cba5474a4cb46a9b9566fe}
+
+\begin{DoxyCompactList}\small\item\em \-The main function that handles the recieved query from gyani and calls appropriate functions from \-Algorithm class and then sends the completion message to gyani. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+pthread\-\_\-t \hyperlink{analyzer_8cpp_ae88436150f7d3103a42a37eaf2c3cc9c}{threads} \mbox{[}\-N\-U\-M\-\_\-\-T\-H\-R\-E\-A\-D\-S\mbox{]}
+\item 
+\hypertarget{analyzer_8cpp_ade8e4966e7fff71327e88fa19b6a3124}{bool {\bfseries finished\-Floyed} = false}\label{analyzer_8cpp_ade8e4966e7fff71327e88fa19b6a3124}
+
+\item 
+\hyperlink{classNetwork}{\-Network} \hyperlink{analyzer_8cpp_a2d9a64328e83ad37af17cbeb5e73b5df}{network}
+\begin{DoxyCompactList}\small\item\em \-This object exposes the graph reader function for \-X\-M\-L format. \end{DoxyCompactList}\item 
+\hypertarget{analyzer_8cpp_a6ace70642cccadf4d6b2ee9532f28d2a}{\hyperlink{classAlgorithms}{\-Algorithms} {\bfseries \-Search}}\label{analyzer_8cpp_a6ace70642cccadf4d6b2ee9532f28d2a}
+
+\item 
+vector$<$ \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$ $>$ \hyperlink{analyzer_8cpp_a92d03d448b1253a43fad3387599697c4}{\-G}
+\begin{DoxyCompactList}\small\item\em \-Graph \-G containg all the nodes. \end{DoxyCompactList}\item 
+\hypertarget{analyzer_8cpp_ae8f2640efa2f2e1875e75aee1bc7c248}{int \hyperlink{analyzer_8cpp_ae8f2640efa2f2e1875e75aee1bc7c248}{vertices}}\label{analyzer_8cpp_ae8f2640efa2f2e1875e75aee1bc7c248}
+
+\begin{DoxyCompactList}\small\item\em \-Number of vertices in the graph. \end{DoxyCompactList}\item 
+\hypertarget{analyzer_8cpp_aaded2de434eb79347d64ea458602b8b6}{int $\ast$$\ast$ \hyperlink{analyzer_8cpp_aaded2de434eb79347d64ea458602b8b6}{\-D}}\label{analyzer_8cpp_aaded2de434eb79347d64ea458602b8b6}
+
+\begin{DoxyCompactList}\small\item\em \-Shortest distance \-Matrix in the graph. \end{DoxyCompactList}\item 
+\hypertarget{analyzer_8cpp_a7864c08dac6f9521691bf32f285e9774}{set$<$ \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$ $>$ {\bfseries data}}\label{analyzer_8cpp_a7864c08dac6f9521691bf32f285e9774}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{analyzer_8cpp_ae71976109ab709345cdc6954ab534ebd}{\index{analyzer.\-cpp@{analyzer.\-cpp}!recieve\-From\-Gyani@{recieve\-From\-Gyani}}
+\index{recieve\-From\-Gyani@{recieve\-From\-Gyani}!analyzer.cpp@{analyzer.\-cpp}}
+\subsubsection[{recieve\-From\-Gyani}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf recieve\-From\-Gyani} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{analyzer_8cpp_ae71976109ab709345cdc6954ab534ebd}
+
+
+\-It recievs the message from gyani. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+string the recieved message 
+\end{DoxyReturn}
+
+
+\-Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{analyzer_8cpp_ae71976109ab709345cdc6954ab534ebd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{analyzer_8cpp_abd3be662ae1729ef974fac49d488fddc}{\index{analyzer.\-cpp@{analyzer.\-cpp}!send\-To\-Gyani@{send\-To\-Gyani}}
+\index{send\-To\-Gyani@{send\-To\-Gyani}!analyzer.cpp@{analyzer.\-cpp}}
+\subsubsection[{send\-To\-Gyani}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf send\-To\-Gyani} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{analyzer_8cpp_abd3be662ae1729ef974fac49d488fddc}
+
+
+\-It sends the completion message to gyani. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void 
+\end{DoxyReturn}
+
+
+\-Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{analyzer_8cpp_abd3be662ae1729ef974fac49d488fddc_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{analyzer_8cpp_a92d03d448b1253a43fad3387599697c4}{\index{analyzer.\-cpp@{analyzer.\-cpp}!\-G@{\-G}}
+\index{\-G@{\-G}!analyzer.cpp@{analyzer.\-cpp}}
+\subsubsection[{\-G}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf \-Graph\-Node}$\ast$$>$ {\bf \-G}}}\label{analyzer_8cpp_a92d03d448b1253a43fad3387599697c4}
+
+
+\-Graph \-G containg all the nodes. 
+
+\hypertarget{analyzer_8cpp_a2d9a64328e83ad37af17cbeb5e73b5df}{\index{analyzer.\-cpp@{analyzer.\-cpp}!network@{network}}
+\index{network@{network}!analyzer.cpp@{analyzer.\-cpp}}
+\subsubsection[{network}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Network} {\bf network}}}\label{analyzer_8cpp_a2d9a64328e83ad37af17cbeb5e73b5df}
+
+
+\-This object exposes the graph reader function for \-X\-M\-L format. 
+
+\hypertarget{analyzer_8cpp_ae88436150f7d3103a42a37eaf2c3cc9c}{\index{analyzer.\-cpp@{analyzer.\-cpp}!threads@{threads}}
+\index{threads@{threads}!analyzer.cpp@{analyzer.\-cpp}}
+\subsubsection[{threads}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-t {\bf threads}\mbox{[}\-N\-U\-M\-\_\-\-T\-H\-R\-E\-A\-D\-S\mbox{]}}}\label{analyzer_8cpp_ae88436150f7d3103a42a37eaf2c3cc9c}
+\-Array of threads 

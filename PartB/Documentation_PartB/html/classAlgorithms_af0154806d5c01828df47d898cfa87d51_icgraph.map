@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classAlgorithms.html#a28ae4d8d83ba5351b9589ed21dccaa64" title="Breadth first search on graph starting from the input node and traverse the whole connected component..." alt="" coords="164,5,273,35"/>
+<area shape="rect" id="node7" href="$classAlgorithms.html#a055ca9200bb41109721eb332aab710eb" title="Depth first search on graph starting from the input node and traverse the whole connected component o..." alt="" coords="164,59,273,88"/>
+<area shape="rect" id="node5" href="$classAlgorithms.html#a632f4fd1b849ad48a20d671c9c681903" title="Breadth first search on graph starting from the first node and traverse till second node is found or ..." alt="" coords="324,5,487,35"/>
+<area shape="rect" id="node9" href="$classAlgorithms.html#aff3cab25b1a219714965a6a820740836" title="Depth first search on graph starting from the first node and traverse till second node is found or wh..." alt="" coords="324,59,487,88"/>
+</map>

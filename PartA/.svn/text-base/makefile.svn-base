@@ -1,0 +1,4 @@
+all:
+	g++ timekeeper.cpp -o timekeeper -lpthread 
+	g++ generator.cpp network.cpp parser.cpp -o generator -lpthread -std=c++0x
+	g++ main.cpp -o main

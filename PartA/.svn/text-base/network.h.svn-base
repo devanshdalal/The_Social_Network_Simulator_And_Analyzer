@@ -1,0 +1,71 @@
+/*
+ * network.h
+ *
+ *  Created on: Oct 11, 2013
+ *      Author: cs1120255
+ */
+
+#ifndef NETWORK_H_
+#define NETWORK_H_
+
+#include <iostream>
+#include <cstring>
+#include <string>
+#include <vector>
+#include"parser.h"
+#include "globals.h"
+
+
+
+using namespace std;
+/* * Format for entry_code:: <year>|<university name><Department><increasing entry number>*/
+
+typedef struct GraphNode{
+	// fields common to both. Whenever this node is used as student node, the non required fields are redundant.
+
+	bool isStudentNode;
+	vector<Interest*> interest_array;
+	Department* department;
+	string name,entry_code;
+	vector<GraphNode*> friend_list; // a list of pointers to the friend node
+	vector<Course*> registered_courses;
+	// dissimilar fields
+	//for isStudentNode==true
+	string hostel_name;
+	int room_number;
+	int floor;
+	//for isStudentNode==false
+	string house_name;
+	int house_number;
+	int year;
+	int number;
+public:
+	~GraphNode()
+	{}
+
+}GraphNode;
+
+class Network{	// expose various functions to the other modules.
+	public:
+	vector<GraphNode*> student_list,faculty_list;
+
+// editing methods
+	void addNode(GraphNode*);
+	void makeFriends(GraphNode*, GraphNode*);
+	void generateGraph(vector<GraphNode*>,vector<GraphNode*>);
+
+// access methods
+	bool isStudent(GraphNode);
+	bool isFaculty(GraphNode);
+	vector<Interest*> giveInterests(GraphNode);
+	Department* giveDepartment(GraphNode);
+	string giveName(GraphNode);
+	string entryNumber(GraphNode);
+	string employeeCode(GraphNode);
+	string giveHostelName(GraphNode);
+	string giveHouseName(GraphNode);
+	int giveHouseNumber(GraphNode);
+
+};
+
+#endif /* NETWORK_H_ */

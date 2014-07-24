@@ -1,0 +1,47 @@
+\hypertarget{structGraphNode}{\section{\-Graph\-Node \-Struct \-Reference}
+\label{structGraphNode}\index{\-Graph\-Node@{\-Graph\-Node}}
+}
+
+
+\-This the data structure for the graph (the node of the graph) that contains all the data read from the .graphml file.  
+
+
+
+
+{\ttfamily \#include $<$network.\-h$>$}
+
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structGraphNode_ad9d6e2da5d509aa0900057163b14aef8}{string \hyperlink{structGraphNode_ad9d6e2da5d509aa0900057163b14aef8}{name}}\label{structGraphNode_ad9d6e2da5d509aa0900057163b14aef8}
+
+\begin{DoxyCompactList}\small\item\em \-Name of the student or the faculty. \end{DoxyCompactList}\item 
+\hypertarget{structGraphNode_aba4ea9c5f3c1c68e61067add47287e93}{string \hyperlink{structGraphNode_aba4ea9c5f3c1c68e61067add47287e93}{university\-\_\-name}}\label{structGraphNode_aba4ea9c5f3c1c68e61067add47287e93}
+
+\begin{DoxyCompactList}\small\item\em \-University it belongs to. \end{DoxyCompactList}\item 
+\hypertarget{structGraphNode_a7ff607d39e5d42e3a28bddec68f6c5eb}{string {\bfseries entry\-\_\-code}}\label{structGraphNode_a7ff607d39e5d42e3a28bddec68f6c5eb}
+
+\item 
+\hypertarget{structGraphNode_a3ffe69b1e0d4df5a623e9b4601e8ce01}{vector$<$ \hyperlink{structGraphNode}{\-Graph\-Node} $\ast$ $>$ {\bfseries friend\-\_\-list}}\label{structGraphNode_a3ffe69b1e0d4df5a623e9b4601e8ce01}
+
+\item 
+\hypertarget{structGraphNode_a094724105a443ea69ba95d0d98356f93}{int \hyperlink{structGraphNode_a094724105a443ea69ba95d0d98356f93}{number}}\label{structGraphNode_a094724105a443ea69ba95d0d98356f93}
+
+\begin{DoxyCompactList}\small\item\em \-The \-I\-D of the node (not to be confused with entry code) \end{DoxyCompactList}\item 
+\hypertarget{structGraphNode_ab1642652eae4367c76a17cede7762471}{int \hyperlink{structGraphNode_ab1642652eae4367c76a17cede7762471}{distance}}\label{structGraphNode_ab1642652eae4367c76a17cede7762471}
+
+\begin{DoxyCompactList}\small\item\em \-This field is used by the dfs and bfs algorithms (the distance from the starting point measured along the traversal) \end{DoxyCompactList}\item 
+\hypertarget{structGraphNode_a2fb577c335546dfd6853fbb877a2e4b4}{bool \hyperlink{structGraphNode_a2fb577c335546dfd6853fbb877a2e4b4}{is\-\_\-visited}}\label{structGraphNode_a2fb577c335546dfd6853fbb877a2e4b4}
+
+\begin{DoxyCompactList}\small\item\em \-This field is used by the dfs and bfs algorithms (whether it is visited during the traversal) \end{DoxyCompactList}\item 
+\hypertarget{structGraphNode_a9e9def63171eb82d99bb12c85e464443}{int \hyperlink{structGraphNode_a9e9def63171eb82d99bb12c85e464443}{distance\-\_\-till\-\_\-here}}\label{structGraphNode_a9e9def63171eb82d99bb12c85e464443}
+
+\begin{DoxyCompactList}\small\item\em \-This field is used by the dfs and bfs algorithms (the shortest distance from the starting point) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This the data structure for the graph (the node of the graph) that contains all the data read from the .graphml file. 
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+network.\-h\end{DoxyCompactItemize}

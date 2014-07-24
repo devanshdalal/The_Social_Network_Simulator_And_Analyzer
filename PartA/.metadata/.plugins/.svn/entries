@@ -1,0 +1,74 @@
+10
+
+dir
+20
+https://svn.iitd.ernet.in/~cs1120255/CSP2/simulatorv1/.metadata/.plugins
+https://svn.iitd.ernet.in/~cs1120255/CSP2
+
+
+
+2013-10-12T18:54:52.859315Z
+8
+cs1120224@IITD.ERNET.IN
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+e8a45ad9-19d2-4cc3-a226-6be050f211f3
+
+
+
+
+
+
+0
+
+org.eclipse.cdt.core
+dir
+
+org.eclipse.cdt.make.core
+dir
+
+org.eclipse.core.resources
+dir
+
+org.eclipse.core.runtime
+dir
+
+org.eclipse.jdt.core
+dir
+
+org.eclipse.jdt.ui
+dir
+
+org.eclipse.mylyn.bugzilla.core
+dir
+
+org.eclipse.mylyn.tasks.ui
+dir
+
+org.eclipse.team.cvs.core
+dir
+
+org.eclipse.team.svn.core
+dir
+
+org.eclipse.team.svn.revision.graph
+dir
+
+org.eclipse.ui.intro
+dir
+
+org.eclipse.ui.workbench
+dir
+

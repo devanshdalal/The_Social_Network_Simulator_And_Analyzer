@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$timekeeper_8cpp.html#a0df63fe5d63b6b8da8a66a1bf4121595" title="It accepts the requests from the generator and places them into the priority queue (request_array)..." alt="" coords="121,5,231,35"/>
+<area shape="rect" id="node7" href="$timekeeper_8cpp.html#ad6865982dfe9d2c50736a8d5df5c2764" title="It sends the wakeup calls to the generator according to order in priority queue. It is a thread runni..." alt="" coords="141,59,211,88"/>
+<area shape="rect" id="node5" href="$timekeeper_8cpp.html#a96cfe0d84ccd62d94e48f40778e34fa0" title="It accepts the requests from the generator threads and places the message into Request data structure..." alt="" coords="287,5,399,35"/>
+<area shape="rect" id="node9" href="$timekeeper_8cpp.html#a115887b1b163205ae12cdaaa44a2ded4" title="It sends the wake up call to the generator threads via the message queue." alt="" coords="281,59,404,88"/>
+</map>

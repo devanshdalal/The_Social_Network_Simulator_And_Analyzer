@@ -1,0 +1,55 @@
+/*
+ * network.h
+ *
+ *  Created on: Oct 11, 2013
+ *      Author: cs1120255
+ */
+
+#ifndef NETWORK_H_
+#define NETWORK_H_
+
+#include <iostream>
+#include <cstring>
+#include <string>
+#include <vector>
+#include <fstream>
+#include <string.h>
+#include <stdlib.h>
+
+
+
+using namespace std;
+/* * Format for entry number:: <university name><Department><S><increasing entry number> */
+/* * Format for entry number:: <university name><Department><F><increasing employ number> */
+
+typedef struct GraphNode{
+
+	string name;
+	string university_name;
+	string entry_code;
+	vector<GraphNode*> friend_list; // a list of pointers to the friend node
+	int number;
+	int distance;
+	bool is_visited;
+	int distance_till_here;
+
+}GraphNode;
+
+
+class Network{
+	public:
+	void addNode(GraphNode*);
+	void makeFriends(GraphNode*, GraphNode*);
+	void generateGraph(vector<GraphNode*>);//,vector<GraphNode*>);
+	vector<GraphNode*> readGraph();
+
+// access methods
+	string giveName(GraphNode);
+	string entryNumber(GraphNode);
+	string employeeCode(GraphNode);
+	string giveUniversityName(GraphNode);
+
+};
+
+
+#endif /* NETWORK_H_ */

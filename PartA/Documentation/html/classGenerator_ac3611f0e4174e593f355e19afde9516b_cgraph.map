@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$generator_8cpp.html#a92efabbc09d1cb825563e23a61052909" title="Sends a request (a structure of type Request) on the message queue." alt="" coords="260,5,359,35"/>
+<area shape="rect" id="node5" href="$generator_8cpp.html#adce1f07924049d53653123d886a1bb80" title="Receives a wake up call (a structure of type WakeUp) from the message queue." alt="" coords="240,59,379,88"/>
+<area shape="rect" id="node7" href="$generator_8cpp.html#a097ba393c5bdf401553ae90be121b39a" title="Waits till the boolean value facu_finished becomes true." alt="" coords="271,112,348,141"/>
+<area shape="rect" id="node9" href="$generator_8cpp.html#a10f0624a6d2b087988f3e69fb5fd0a71" title="Implements a wait till the boolean value stud_finished becomes true." alt="" coords="271,165,348,195"/>
+<area shape="rect" id="node11" href="$generator_8cpp.html#ad2d408b3d54352ab2e740e358035775f" title="It kills the generator process and its parent process after clearing the message queue and freeing it..." alt="" coords="260,219,359,248"/>
+<area shape="rect" id="node13" href="$classNetwork.html#a8db93fc8e447bbc3ae3b0cd3b2e2ec1a" title="It generates the graph into graphML format." alt="" coords="428,219,591,248"/>
+</map>

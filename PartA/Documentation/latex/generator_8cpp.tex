@@ -1,0 +1,409 @@
+\hypertarget{generator_8cpp}{\section{generator.\-cpp \-File \-Reference}
+\label{generator_8cpp}\index{generator.\-cpp@{generator.\-cpp}}
+}
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include $<$pthread.\-h$>$}\*
+{\ttfamily \#include $<$fstream$>$}\*
+{\ttfamily \#include $<$sstream$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include $<$vector$>$}\*
+{\ttfamily \#include $<$cstdlib$>$}\*
+{\ttfamily \#include $<$cstring$>$}\*
+{\ttfamily \#include $<$math.\-h$>$}\*
+{\ttfamily \#include $<$signal.\-h$>$}\*
+{\ttfamily \#include $<$random$>$}\*
+{\ttfamily \#include $<$iomanip$>$}\*
+{\ttfamily \#include \char`\"{}globals.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}generator.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}set\-Environment.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}network.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}ipc.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}timekeeper.\-h\char`\"{}}\*
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{generator_8cpp_a7735206bdfad487588bba2126b806ab7}{\#define {\bfseries \-N\-U\-M\-\_\-\-T\-H\-R\-E\-A\-D\-S}~4}\label{generator_8cpp_a7735206bdfad487588bba2126b806ab7}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{generator_8cpp_a59dbee442d1a4d675277130f23d82023}{ofstream {\bfseries terminal} (\char`\"{}\-Part\-A/console.\-txt\char`\"{})}\label{generator_8cpp_a59dbee442d1a4d675277130f23d82023}
+
+\item 
+\hypertarget{generator_8cpp_a08a4e64e5bcdb8fa9e9eecf4dcdcad43}{ofstream {\bfseries logfile} (\char`\"{}\-Part\-A/log.\-txt\char`\"{})}\label{generator_8cpp_a08a4e64e5bcdb8fa9e9eecf4dcdcad43}
+
+\item 
+\hypertarget{generator_8cpp_a1c9dd591464a1a0d9666ab7ce42a268b}{ofstream {\bfseries \-Frilog} (\char`\"{}\-Part\-A/\-Friend\-\_\-log.\-txt\char`\"{})}\label{generator_8cpp_a1c9dd591464a1a0d9666ab7ce42a268b}
+
+\item 
+\hypertarget{generator_8cpp_a7b948f57a3483a118bcc92eefc264bb8}{uniform\-\_\-int\-\_\-distribution$<$ int $>$ {\bfseries dis} (0, 10000000)}\label{generator_8cpp_a7b948f57a3483a118bcc92eefc264bb8}
+
+\item 
+\hypertarget{generator_8cpp_ad2d408b3d54352ab2e740e358035775f}{void \hyperlink{generator_8cpp_ad2d408b3d54352ab2e740e358035775f}{kill\-Processes} ()}\label{generator_8cpp_ad2d408b3d54352ab2e740e358035775f}
+
+\begin{DoxyCompactList}\small\item\em \-It kills the generator process and its parent process after clearing the message queue and freeing its space. \end{DoxyCompactList}\item 
+default\-\_\-random\-\_\-engine \hyperlink{generator_8cpp_a260f7b7f723fdf53f1ab08e25a1fcf08}{generator} (tuple1.\-randomseed.\-friend\-\_\-random)
+\item 
+void \hyperlink{generator_8cpp_a92efabbc09d1cb825563e23a61052909}{send\-Request} (\hyperlink{structRequest}{\-Request} struct\-\_\-to\-\_\-send)
+\begin{DoxyCompactList}\small\item\em \-Sends a request (a structure of type \hyperlink{structRequest}{\-Request}) on the message queue. \end{DoxyCompactList}\item 
+\hyperlink{structWakeUp}{\-Wake\-Up} \hyperlink{generator_8cpp_adce1f07924049d53653123d886a1bb80}{recieve\-Wake\-Up\-Call} (long a)
+\begin{DoxyCompactList}\small\item\em \-Receives a wake up call (a structure of type \hyperlink{structWakeUp}{\-Wake\-Up}) from the message queue. \end{DoxyCompactList}\item 
+void \hyperlink{generator_8cpp_a10f0624a6d2b087988f3e69fb5fd0a71}{stud\-\_\-lock} ()
+\begin{DoxyCompactList}\small\item\em \-Implements a wait till the boolean value stud\-\_\-finished becomes true. \end{DoxyCompactList}\item 
+void \hyperlink{generator_8cpp_a097ba393c5bdf401553ae90be121b39a}{facu\-\_\-lock} ()
+\begin{DoxyCompactList}\small\item\em \-Waits till the boolean value facu\-\_\-finished becomes true. \end{DoxyCompactList}\item 
+\hypertarget{generator_8cpp_a00e05701c8452e995d7a0a7429b21af8}{void {\bfseries print\-Nodes} ()}\label{generator_8cpp_a00e05701c8452e995d7a0a7429b21af8}
+
+\item 
+\hypertarget{generator_8cpp_af3bd5c20220dbed6c12f098ac20e227a}{void $\ast$ {\bfseries generate\-Student} (void $\ast$threadid)}\label{generator_8cpp_af3bd5c20220dbed6c12f098ac20e227a}
+
+\item 
+\hypertarget{generator_8cpp_a1fa9b71ae8ab0def6e153fa70fedf349}{void $\ast$ {\bfseries generate\-Faculty} (void $\ast$threadid)}\label{generator_8cpp_a1fa9b71ae8ab0def6e153fa70fedf349}
+
+\item 
+\hypertarget{generator_8cpp_adb906ab51ae4eb469a6e66c85d4f9932}{void $\ast$ {\bfseries generate\-Courses} (void $\ast$threadid)}\label{generator_8cpp_adb906ab51ae4eb469a6e66c85d4f9932}
+
+\item 
+\hypertarget{generator_8cpp_a1a0542356e6b5ca0ac7da55074c095c2}{void $\ast$ {\bfseries generate\-Friends} (void $\ast$threadid)}\label{generator_8cpp_a1a0542356e6b5ca0ac7da55074c095c2}
+
+\item 
+\hypertarget{generator_8cpp_a3df242c3f48c2e38baaf2aa74ab2cd35}{int {\bfseries start\-Threads} ()}\label{generator_8cpp_a3df242c3f48c2e38baaf2aa74ab2cd35}
+
+\item 
+\hypertarget{generator_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{int \hyperlink{generator_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)}\label{generator_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCompactList}\small\item\em \-This functions forks into two processes, timekeeper as the parent process and generator as the child. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{generator_8cpp_ae88436150f7d3103a42a37eaf2c3cc9c}{pthread\-\_\-t {\bfseries threads} \mbox{[}\-N\-U\-M\-\_\-\-T\-H\-R\-E\-A\-D\-S\mbox{]}}\label{generator_8cpp_ae88436150f7d3103a42a37eaf2c3cc9c}
+
+\item 
+pthread\-\_\-mutex\-\_\-t \hyperlink{generator_8cpp_a31aeacad19264d9cad96c2ceb274456d}{mutex1} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R
+\item 
+\hypertarget{generator_8cpp_a64d945a28a1d31209c31cc68e7bf841c}{pthread\-\_\-mutex\-\_\-t {\bfseries mutex2} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_a64d945a28a1d31209c31cc68e7bf841c}
+
+\item 
+\hypertarget{generator_8cpp_a11d98f755d437c95ff6a19dfca240ace}{pthread\-\_\-mutex\-\_\-t {\bfseries mutex3} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_a11d98f755d437c95ff6a19dfca240ace}
+
+\item 
+\hypertarget{generator_8cpp_a76b2cc1de079dd45bc7324a63a2aa232}{pthread\-\_\-mutex\-\_\-t {\bfseries friend\-\_\-time\-\_\-mutex} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_a76b2cc1de079dd45bc7324a63a2aa232}
+
+\item 
+\hypertarget{generator_8cpp_a653ba9217f50994d246ac7d0af30755c}{pthread\-\_\-mutex\-\_\-t {\bfseries request\-\_\-mutex1} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_a653ba9217f50994d246ac7d0af30755c}
+
+\item 
+\hypertarget{generator_8cpp_a063f812eb7eeee04a0b557ffc5a251fb}{pthread\-\_\-mutex\-\_\-t {\bfseries friend\-\_\-lock} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_a063f812eb7eeee04a0b557ffc5a251fb}
+
+\item 
+\hypertarget{generator_8cpp_a4e27c8ac7b705c411648eff1657faa39}{pthread\-\_\-mutex\-\_\-t {\bfseries log\-\_\-lock} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_a4e27c8ac7b705c411648eff1657faa39}
+
+\item 
+\hypertarget{generator_8cpp_a4c2186e344bd9d2a87bc5a32a3fb2358}{pthread\-\_\-mutex\-\_\-t {\bfseries fri\-\_\-log\-\_\-lock} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_a4c2186e344bd9d2a87bc5a32a3fb2358}
+
+\item 
+\hypertarget{generator_8cpp_aa5e3fa6160320d41e4d179c09774127f}{pthread\-\_\-mutex\-\_\-t {\bfseries exit\-\_\-lock} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_aa5e3fa6160320d41e4d179c09774127f}
+
+\item 
+\hypertarget{generator_8cpp_a2cd4445216a3f1db1ab7ef06ca3968c0}{pthread\-\_\-mutex\-\_\-t {\bfseries delete\-\_\-lock} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_a2cd4445216a3f1db1ab7ef06ca3968c0}
+
+\item 
+\hypertarget{generator_8cpp_ae73d989e687864ce4f51a025d120527b}{pthread\-\_\-mutex\-\_\-t {\bfseries semester\-\_\-lock} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_ae73d989e687864ce4f51a025d120527b}
+
+\item 
+\hypertarget{generator_8cpp_acf0d414132bf811586eff5920d75569f}{pthread\-\_\-mutex\-\_\-t {\bfseries round\-\_\-robin\-\_\-lock} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_acf0d414132bf811586eff5920d75569f}
+
+\item 
+\hypertarget{generator_8cpp_a7dc396104a2b4b5e27ca9ec82ecae7aa}{pthread\-\_\-mutex\-\_\-t {\bfseries entry\-\_\-code} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_a7dc396104a2b4b5e27ca9ec82ecae7aa}
+
+\item 
+pthread\-\_\-cond\-\_\-t \hyperlink{generator_8cpp_adc4d12db55189585707685e1d1de726d}{round\-\_\-robin\-\_\-cond} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-C\-O\-N\-D\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R
+\item 
+\hypertarget{generator_8cpp_a16caa0dd1a5dc5560560f62d78b0e7ad}{pthread\-\_\-cond\-\_\-t {\bfseries semester\-\_\-cond} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-C\-O\-N\-D\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_a16caa0dd1a5dc5560560f62d78b0e7ad}
+
+\item 
+\hypertarget{generator_8cpp_a88464da2a68fa55e68fe97b84d633d43}{pthread\-\_\-cond\-\_\-t {\bfseries count\-\_\-threshold1} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-C\-O\-N\-D\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_a88464da2a68fa55e68fe97b84d633d43}
+
+\item 
+\hypertarget{generator_8cpp_a26ddbc73c7b47839d5e9bdc6af6e64e5}{pthread\-\_\-cond\-\_\-t {\bfseries count\-\_\-threshold2} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-C\-O\-N\-D\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_a26ddbc73c7b47839d5e9bdc6af6e64e5}
+
+\item 
+\hypertarget{generator_8cpp_a34b450bc48bf6678ce959d137d56850e}{pthread\-\_\-cond\-\_\-t {\bfseries count\-\_\-threshold3} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-C\-O\-N\-D\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_a34b450bc48bf6678ce959d137d56850e}
+
+\item 
+\hypertarget{generator_8cpp_addcbd0113a1a37e443bd7de57e227183}{pthread\-\_\-cond\-\_\-t {\bfseries count\-\_\-threshold4} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-C\-O\-N\-D\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_addcbd0113a1a37e443bd7de57e227183}
+
+\item 
+\hypertarget{generator_8cpp_adebdd6ae18677b2d7e65b2c16f85078d}{pthread\-\_\-cond\-\_\-t {\bfseries delete\-\_\-cond} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-C\-O\-N\-D\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_adebdd6ae18677b2d7e65b2c16f85078d}
+
+\item 
+\hypertarget{generator_8cpp_a9584707faef7a56fd357127f14490303}{pthread\-\_\-cond\-\_\-t {\bfseries friend\-\_\-time\-\_\-cond} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-C\-O\-N\-D\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}\label{generator_8cpp_a9584707faef7a56fd357127f14490303}
+
+\item 
+\-Set\-Environment \hyperlink{generator_8cpp_ac55903fc9553804663af141077b9dfff}{set\-Environment}
+\item 
+\hypertarget{generator_8cpp_af503ec7b90936bed3adc2459c05ef26f}{\-University\-Randomseed\-Tuple {\bfseries tuple1}}\label{generator_8cpp_af503ec7b90936bed3adc2459c05ef26f}
+
+\item 
+\hypertarget{generator_8cpp_a2d9a64328e83ad37af17cbeb5e73b5df}{\hyperlink{classNetwork}{\-Network} {\bfseries network}}\label{generator_8cpp_a2d9a64328e83ad37af17cbeb5e73b5df}
+
+\item 
+\hyperlink{classGenerator}{\-Generator} \hyperlink{generator_8cpp_af92ed9077588d63cda32fa08521a44fd}{generator1}
+\item 
+\hypertarget{generator_8cpp_a46cb108d0bb3a9fc814405bb974e4a9d}{float {\bfseries friend\-\_\-count} = 0}\label{generator_8cpp_a46cb108d0bb3a9fc814405bb974e4a9d}
+
+\item 
+\hypertarget{generator_8cpp_ace66ff1d92a0543c6033329fe2e1bc7e}{default\-\_\-random\-\_\-engine {\bfseries r\-S}}\label{generator_8cpp_ace66ff1d92a0543c6033329fe2e1bc7e}
+
+\item 
+\hypertarget{generator_8cpp_abf7767aad0d161dd677d0ae62e45b82d}{default\-\_\-random\-\_\-engine {\bfseries r\-Fa}}\label{generator_8cpp_abf7767aad0d161dd677d0ae62e45b82d}
+
+\item 
+\hypertarget{generator_8cpp_a9c2675c1623dded3e36409c6c61a7a10}{default\-\_\-random\-\_\-engine {\bfseries r\-C}}\label{generator_8cpp_a9c2675c1623dded3e36409c6c61a7a10}
+
+\item 
+\hypertarget{generator_8cpp_a4ef1388acbe917ecd1786a242395fdf2}{default\-\_\-random\-\_\-engine {\bfseries r\-Fd}}\label{generator_8cpp_a4ef1388acbe917ecd1786a242395fdf2}
+
+\item 
+string \hyperlink{generator_8cpp_aeeaf56ad8efba21cbdc12079676ade9f}{student\-\_\-firstnames} \mbox{[}$\,$\mbox{]}
+\item 
+string {\bfseries student\-\_\-lastnames} \mbox{[}$\,$\mbox{]}
+\item 
+string {\bfseries faculty\-\_\-firstnames} \mbox{[}$\,$\mbox{]}
+\item 
+string {\bfseries faculty\-\_\-middlenames} \mbox{[}$\,$\mbox{]}
+\item 
+string {\bfseries faculty\-\_\-lastnames} \mbox{[}$\,$\mbox{]}
+\item 
+int \hyperlink{generator_8cpp_ab53a36bd69be565de6408d4198635902}{stud\-\_\-f}
+\item 
+\hypertarget{generator_8cpp_a9d1aeaded08a373146c9d8cef777b0bf}{int {\bfseries stud\-\_\-l}}\label{generator_8cpp_a9d1aeaded08a373146c9d8cef777b0bf}
+
+\item 
+\hypertarget{generator_8cpp_af117ce47993f3d23b25d7a361351b4c0}{int {\bfseries facu\-\_\-f}}\label{generator_8cpp_af117ce47993f3d23b25d7a361351b4c0}
+
+\item 
+\hypertarget{generator_8cpp_a79a5cad29ff03c027779d99abacbc2bb}{int {\bfseries facu\-\_\-m}}\label{generator_8cpp_a79a5cad29ff03c027779d99abacbc2bb}
+
+\item 
+\hypertarget{generator_8cpp_ad1263c35760419cdb9c7195960ae34a0}{int {\bfseries facu\-\_\-l}}\label{generator_8cpp_ad1263c35760419cdb9c7195960ae34a0}
+
+\item 
+\hypertarget{generator_8cpp_a9ae374a95416e71f47d85dee42f6576d}{int {\bfseries num\-\_\-of\-\_\-sems} = 0}\label{generator_8cpp_a9ae374a95416e71f47d85dee42f6576d}
+
+\item 
+int \hyperlink{generator_8cpp_aea4a00d68378cd0c861ae5be0eab85eb}{available\-\_\-stud} = 0
+\item 
+\hypertarget{generator_8cpp_a9285caaf6d56908ccfd07d61cd09707d}{int {\bfseries available\-\_\-facu} = 0}\label{generator_8cpp_a9285caaf6d56908ccfd07d61cd09707d}
+
+\item 
+bool \hyperlink{generator_8cpp_a8545b5ef79e6d9a5f68639396e81e8e5}{stud\-\_\-finished} = false
+\item 
+\hypertarget{generator_8cpp_a4ca9d77c0901535e5e93f45ecaba542c}{bool {\bfseries facu\-\_\-finished} = false}\label{generator_8cpp_a4ca9d77c0901535e5e93f45ecaba542c}
+
+\item 
+\hypertarget{generator_8cpp_afde8b494a2d9ce9be6792c87d4367a39}{bool {\bfseries student\-\_\-available} = false}\label{generator_8cpp_afde8b494a2d9ce9be6792c87d4367a39}
+
+\item 
+\hypertarget{generator_8cpp_ab6f03d4634b03c99bc504393abe2cffc}{bool {\bfseries faculty\-\_\-available} = false}\label{generator_8cpp_ab6f03d4634b03c99bc504393abe2cffc}
+
+\item 
+int \hyperlink{generator_8cpp_a2bb76f07d45652d0e4b296991ec6ce8a}{days\-\_\-of\-\_\-simulation} = 0
+\item 
+bool \hyperlink{generator_8cpp_a202107b334011754ebc5594c90f2a60e}{is\-Gen\-Stud\-Finished} = false
+\item 
+\hypertarget{generator_8cpp_a30e6341b9ce4b66f1c35912d41981ae2}{bool {\bfseries is\-Gen\-Fac\-Finished} = false}\label{generator_8cpp_a30e6341b9ce4b66f1c35912d41981ae2}
+
+\item 
+\hypertarget{generator_8cpp_a8e8bba92ad3239ca77bd66b10cc7c249}{bool {\bfseries is\-Gen\-Courses\-Finished} = false}\label{generator_8cpp_a8e8bba92ad3239ca77bd66b10cc7c249}
+
+\item 
+\hypertarget{generator_8cpp_a36657b6ea55da5c976b4cf474cda91d6}{bool {\bfseries is\-Gen\-Fri\-Finished} = false}\label{generator_8cpp_a36657b6ea55da5c976b4cf474cda91d6}
+
+\item 
+\hypertarget{generator_8cpp_af687c4815a6719c2fc54b1c697ab6915}{bool {\bfseries deleting\-\_\-studs} = false}\label{generator_8cpp_af687c4815a6719c2fc54b1c697ab6915}
+
+\item 
+\hypertarget{generator_8cpp_ae29617de649b665cf0d12c07b31c31d1}{int {\bfseries num\-\_\-nodes} = 0}\label{generator_8cpp_ae29617de649b665cf0d12c07b31c31d1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{generator_8cpp_a097ba393c5bdf401553ae90be121b39a}{\index{generator.\-cpp@{generator.\-cpp}!facu\-\_\-lock@{facu\-\_\-lock}}
+\index{facu\-\_\-lock@{facu\-\_\-lock}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{facu\-\_\-lock}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf facu\-\_\-lock} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{generator_8cpp_a097ba393c5bdf401553ae90be121b39a}
+
+
+\-Waits till the boolean value facu\-\_\-finished becomes true. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em void} & void \\
+\hline
+\end{DoxyParams}
+\hypertarget{generator_8cpp_a260f7b7f723fdf53f1ab08e25a1fcf08}{\index{generator.\-cpp@{generator.\-cpp}!generator@{generator}}
+\index{generator@{generator}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{generator}]{\setlength{\rightskip}{0pt plus 5cm}default\-\_\-random\-\_\-engine {\bf generator} (
+\begin{DoxyParamCaption}
+\item[{tuple1.\-randomseed.}]{friend\-\_\-random}
+\end{DoxyParamCaption}
+)}}\label{generator_8cpp_a260f7b7f723fdf53f1ab08e25a1fcf08}
+\-Inbuilt function for generating random numbers. \hypertarget{generator_8cpp_adce1f07924049d53653123d886a1bb80}{\index{generator.\-cpp@{generator.\-cpp}!recieve\-Wake\-Up\-Call@{recieve\-Wake\-Up\-Call}}
+\index{recieve\-Wake\-Up\-Call@{recieve\-Wake\-Up\-Call}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{recieve\-Wake\-Up\-Call}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Wake\-Up} {\bf recieve\-Wake\-Up\-Call} (
+\begin{DoxyParamCaption}
+\item[{long}]{a}
+\end{DoxyParamCaption}
+)}}\label{generator_8cpp_adce1f07924049d53653123d886a1bb80}
+
+
+\-Receives a wake up call (a structure of type \hyperlink{structWakeUp}{\-Wake\-Up}) from the message queue. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em long} & the unique \-I\-D number to get a specific message from the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{structWakeUp}{\-Wake\-Up} the required message received from the queue 
+\end{DoxyReturn}
+\hypertarget{generator_8cpp_a92efabbc09d1cb825563e23a61052909}{\index{generator.\-cpp@{generator.\-cpp}!send\-Request@{send\-Request}}
+\index{send\-Request@{send\-Request}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{send\-Request}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf send\-Request} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Request}}]{struct\-\_\-to\-\_\-send}
+\end{DoxyParamCaption}
+)}}\label{generator_8cpp_a92efabbc09d1cb825563e23a61052909}
+
+
+\-Sends a request (a structure of type \hyperlink{structRequest}{\-Request}) on the message queue. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structRequest}{\-Request}} & the required message to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{generator_8cpp_a10f0624a6d2b087988f3e69fb5fd0a71}{\index{generator.\-cpp@{generator.\-cpp}!stud\-\_\-lock@{stud\-\_\-lock}}
+\index{stud\-\_\-lock@{stud\-\_\-lock}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{stud\-\_\-lock}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf stud\-\_\-lock} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{generator_8cpp_a10f0624a6d2b087988f3e69fb5fd0a71}
+
+
+\-Implements a wait till the boolean value stud\-\_\-finished becomes true. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em void} & void \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{generator_8cpp_aea4a00d68378cd0c861ae5be0eab85eb}{\index{generator.\-cpp@{generator.\-cpp}!available\-\_\-stud@{available\-\_\-stud}}
+\index{available\-\_\-stud@{available\-\_\-stud}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{available\-\_\-stud}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf available\-\_\-stud} = 0}}\label{generator_8cpp_aea4a00d68378cd0c861ae5be0eab85eb}
+\-Available number of students and faculty for assigning courses \hypertarget{generator_8cpp_a2bb76f07d45652d0e4b296991ec6ce8a}{\index{generator.\-cpp@{generator.\-cpp}!days\-\_\-of\-\_\-simulation@{days\-\_\-of\-\_\-simulation}}
+\index{days\-\_\-of\-\_\-simulation@{days\-\_\-of\-\_\-simulation}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{days\-\_\-of\-\_\-simulation}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf days\-\_\-of\-\_\-simulation} = 0}}\label{generator_8cpp_a2bb76f07d45652d0e4b296991ec6ce8a}
+\-Days of simulation from the argument \hypertarget{generator_8cpp_a4737efa89f1912c4407b38fd9c778907}{\index{generator.\-cpp@{generator.\-cpp}!faculty\-\_\-firstnames@{faculty\-\_\-firstnames}}
+\index{faculty\-\_\-firstnames@{faculty\-\_\-firstnames}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{faculty\-\_\-firstnames}]{\setlength{\rightskip}{0pt plus 5cm}string faculty\-\_\-firstnames\mbox{[}$\,$\mbox{]}}}\label{generator_8cpp_a4737efa89f1912c4407b38fd9c778907}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {"Huzur", "Amithabh", "M.", "Subhasish", "Sorav", "K.K.", "Naveen", "Shyam", "
+      B.", "Ragesh", "Pankaj",
+                "Prem", "Saroj", "Amit", "Anshul", "S.", "Subhodh", "S.N", "
+      Preeti", "Kolin", "Sanjeeva", "Vinay", "Maya", "Smruti",
+                "Aaditeshwar", "Sandeep", "Parag"}
+\end{DoxyCode}
+\hypertarget{generator_8cpp_ab1f6bddf0268f7b07fc3859aaa004a26}{\index{generator.\-cpp@{generator.\-cpp}!faculty\-\_\-lastnames@{faculty\-\_\-lastnames}}
+\index{faculty\-\_\-lastnames@{faculty\-\_\-lastnames}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{faculty\-\_\-lastnames}]{\setlength{\rightskip}{0pt plus 5cm}string faculty\-\_\-lastnames\mbox{[}$\,$\mbox{]}}}\label{generator_8cpp_ab1f6bddf0268f7b07fc3859aaa004a26}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {"Saran", "Bagchi", "Balakrishna", "Banerjee", "Bansal", "Biswas", "Garg", "
+      Gupta", "Jain", "Jaiswal",
+                "Jalote", "Kalra", "Kaushik", "Kumar", "Arun", "Maheshwari", "
+      Panda", " Paul", "Prasad", "Ribeiro", "Ramanath", "Sarangi",
+                "Seth", "Sen", "Singla"}
+\end{DoxyCode}
+\hypertarget{generator_8cpp_a9b8f02d677af2136e27558e2878ce145}{\index{generator.\-cpp@{generator.\-cpp}!faculty\-\_\-middlenames@{faculty\-\_\-middlenames}}
+\index{faculty\-\_\-middlenames@{faculty\-\_\-middlenames}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{faculty\-\_\-middlenames}]{\setlength{\rightskip}{0pt plus 5cm}string faculty\-\_\-middlenames\mbox{[}$\,$\mbox{]}}}\label{generator_8cpp_a9b8f02d677af2136e27558e2878ce145}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+{"James","John","William","Thomas","Alexander","Robert","Michael","David","
+      Andrew","Peter","Joseph",
+                "Jack","Edward","Anthony","Christopher","Daniel","Henry","
+      Matthew","Oliver","Jay"}
+\end{DoxyCode}
+\hypertarget{generator_8cpp_af92ed9077588d63cda32fa08521a44fd}{\index{generator.\-cpp@{generator.\-cpp}!generator1@{generator1}}
+\index{generator1@{generator1}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{generator1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Generator} {\bf generator1}}}\label{generator_8cpp_af92ed9077588d63cda32fa08521a44fd}
+\-Object of type \hyperlink{classGenerator}{\-Generator} that exposes the generaor thread functions \hypertarget{generator_8cpp_a202107b334011754ebc5594c90f2a60e}{\index{generator.\-cpp@{generator.\-cpp}!is\-Gen\-Stud\-Finished@{is\-Gen\-Stud\-Finished}}
+\index{is\-Gen\-Stud\-Finished@{is\-Gen\-Stud\-Finished}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{is\-Gen\-Stud\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf is\-Gen\-Stud\-Finished} = false}}\label{generator_8cpp_a202107b334011754ebc5594c90f2a60e}
+\-Boolean values to check whether the respective thread has completed \hypertarget{generator_8cpp_a31aeacad19264d9cad96c2ceb274456d}{\index{generator.\-cpp@{generator.\-cpp}!mutex1@{mutex1}}
+\index{mutex1@{mutex1}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{mutex1}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-mutex\-\_\-t {\bf mutex1} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}}\label{generator_8cpp_a31aeacad19264d9cad96c2ceb274456d}
+\-List of all the mutex locks used in the program. \hypertarget{generator_8cpp_adc4d12db55189585707685e1d1de726d}{\index{generator.\-cpp@{generator.\-cpp}!round\-\_\-robin\-\_\-cond@{round\-\_\-robin\-\_\-cond}}
+\index{round\-\_\-robin\-\_\-cond@{round\-\_\-robin\-\_\-cond}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{round\-\_\-robin\-\_\-cond}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-cond\-\_\-t {\bf round\-\_\-robin\-\_\-cond} = \-P\-T\-H\-R\-E\-A\-D\-\_\-\-C\-O\-N\-D\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}}\label{generator_8cpp_adc4d12db55189585707685e1d1de726d}
+\-List of all the conditional variables used in the program. \hypertarget{generator_8cpp_ac55903fc9553804663af141077b9dfff}{\index{generator.\-cpp@{generator.\-cpp}!set\-Environment@{set\-Environment}}
+\index{set\-Environment@{set\-Environment}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{set\-Environment}]{\setlength{\rightskip}{0pt plus 5cm}\-University\-Randomseed\-Tuple {\bf \-Set\-Environment\-::set\-Environment}}}\label{generator_8cpp_ac55903fc9553804663af141077b9dfff}
+\-Object of type \-Set\-Environment that exposes the parsing function \hypertarget{generator_8cpp_ab53a36bd69be565de6408d4198635902}{\index{generator.\-cpp@{generator.\-cpp}!stud\-\_\-f@{stud\-\_\-f}}
+\index{stud\-\_\-f@{stud\-\_\-f}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{stud\-\_\-f}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf stud\-\_\-f}}}\label{generator_8cpp_ab53a36bd69be565de6408d4198635902}
+\-Number of names in respective arrays \hypertarget{generator_8cpp_a8545b5ef79e6d9a5f68639396e81e8e5}{\index{generator.\-cpp@{generator.\-cpp}!stud\-\_\-finished@{stud\-\_\-finished}}
+\index{stud\-\_\-finished@{stud\-\_\-finished}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{stud\-\_\-finished}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf stud\-\_\-finished} = false}}\label{generator_8cpp_a8545b5ef79e6d9a5f68639396e81e8e5}
+\-Boolean values for implementation of conditional variables. \hypertarget{generator_8cpp_aeeaf56ad8efba21cbdc12079676ade9f}{\index{generator.\-cpp@{generator.\-cpp}!student\-\_\-firstnames@{student\-\_\-firstnames}}
+\index{student\-\_\-firstnames@{student\-\_\-firstnames}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{student\-\_\-firstnames}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf student\-\_\-firstnames}\mbox{[}$\,$\mbox{]}}}\label{generator_8cpp_aeeaf56ad8efba21cbdc12079676ade9f}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {"Sahil","Aakash","Aashish","Aastha","Abhay","Abhijeet","Abhimanyu ","Abhinav"
+      ,"Aditya","Aishwarya",
+                "Akash","Akshay","Akula ","Amritansh","Arpit","Ashutosh","
+      Banmanlang","Bhavesh","Bhavya","Sai","Devansh","Divyansh",
+                "Edubilli","Himanshu","Kaushal","Kothinti","Kunal ","Sumanth","
+      Mohit","Samheeth","Mukesh","Neel","Nikhil",
+                "Nishant","Poojan","Parul ","Prateek","Raghuvansh","Rahul","
+      Rayala","Rishi","Ritesh","Sachin","Sajal","Saket","Saurabh",
+                "Shivam","Shubham","Shubhankar","Siddarth","Swapnil","Tata","
+      Tushar","Valaval","Veerendra","Vijender","ZalaRonak",
+                "Vansh","Tajveer","Paras","Namita","Prateek","Akshat","
+      Bishwanath","Shagun","Ankita","Manas","Anupriya"}
+\end{DoxyCode}
+\-List of the arrays of the first, middle and last names of the students and faculties to be selected from. \hypertarget{generator_8cpp_a2ef7189c661d1b5651e2d5028a90a3d1}{\index{generator.\-cpp@{generator.\-cpp}!student\-\_\-lastnames@{student\-\_\-lastnames}}
+\index{student\-\_\-lastnames@{student\-\_\-lastnames}!generator.cpp@{generator.\-cpp}}
+\subsubsection[{student\-\_\-lastnames}]{\setlength{\rightskip}{0pt plus 5cm}string student\-\_\-lastnames\mbox{[}$\,$\mbox{]}}}\label{generator_8cpp_a2ef7189c661d1b5651e2d5028a90a3d1}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {"Loomba","Kumar","Goyal","Tripathi","Mitra","Joshi","Kumar","Singh","Verma","
+      Shakya","Rai","Paroda",
+                "Bhat","Prakash","Sharma","Agrawal","Singh","Warr Lyndem","
+      Deepak","Chouhan","Deep","Dalal","Avinash","Gangwar","Hooda",
+                "Reddy","Singhal","Sumanth","Agarwal","Mathur","Kumar","Kamal",
+      "Jain","Mehta","Chaudhry","Saxena","Patidar","Bharadwaj",
+                "Mundhra","Noothigattu","Yadav","Gupta","Garg","Solanki","
+      Palash","Radhakrishna","Marda","Shyam","Nikhil","Vijender",
+                "Prakash","Ratanlal","Pahwa","Sandhu","Narang","Atri","Kaushik"
+      ,"Saxena","Mandal","Kush","Brahmchari"}
+\end{DoxyCode}

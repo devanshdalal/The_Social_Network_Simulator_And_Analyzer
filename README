@@ -1,0 +1,69 @@
+-This is a discrete time event social Network Simulator and Analyser.
+-This project was created as part of a course(CSP301) project under Prof. Subodh Kumar , IIT Delhi , 2013.
+-This project has been tested and developed on linux computers .
+-c++ pthreads, message queues ,semaphores and mutexes etc have been used for achieving the desired Network Simulator and Analyser. 
+-This project has been distributed in 2 parts.
+	1) Network Generation,
+	2) User queries over generated network.
+
+####################################### PART A #######################################
+
+parser.h      --> contains all the structures required in the programs.
+parser.cpp    --> contains the file parser.
+generator.cpp --> contains the thread functions.
+network.h     --> contains data structure reqired to store student node and faculty node
+timekeeper.h  --> synchronizes with generator, accepts and wakes up threads
+main.cpp      --> main function starts timekeeper and generator
+
+-This program produces "log.txt" , "graph.graphml".
+	--log.txt : Contains all log of all the events that took place in the simulation.
+	--graph.graphml : Contains the generated graph saved in graphml format.
+
+-A sample input file has been provided named as "SocialNetworkEnv.inp".
+-The generic Structure of the graphml file is :
+	UNIVERSITY university_name
+	DEPARTMENT dept_name num_faculty num_students_per_year semester_dept_courses
+	semeseter_nondept_courses
+	COURSE course_number dept_that_offers frequency_per_year
+	INTEREST interest_name popularity
+	HOSTEL hostel_name
+	HOUSELOCALITY locality_name
+	FRIENDSHIPRATE req_per_minute
+	OPENNESS out_probability
+	FRIENDLINESS recip_probability
+	RANDOMSEED faculty_random student_random course_random friend_random
+-This program produces "log.txt" , "graph.graphml" .
+	log.txt : Contains all log of all the events that took place in the simulation.
+	graph.graphml : Contains the generated graph saved in graphml format.
+
+####################################### PART B ######################################
+
+Gyani: reads query from std::in and sends it to analyzer
+
+Analyzer: first reads the graphml file and recieves query from Gyani and returns the result.
+
+Algorithms.cpp : contains all the required algorithms
+					1. Dijkstra's algorithm
+					2. Floyd-Warshall algorithm
+					3. Bredth First Search algorithms
+
+Network.cpp: read graphml function, and stores the nodes
+
+- A perl script will ask as input the name of the graphml file to be analysed.Please input the name of the graphml file copied earlier.
+-Once the perl Script starts, it will take some time to preprocess the data and then it will present a UI where user can 
+	ask questions regarding the generated graph.
+-6 Questions are presently supported :
+	1. Size of Clique of a given person (identified by university name and ID)
+	2. The length of the shortest path between two given people
+	3. The list of people on the shortest path between two given people
+	4. The shortest path in the graph (between any pair of people)
+	5. The importance of the given person (the importance is the number of the all-pair shortest paths that include that person)
+	6. Is any of the friends of a given person more important that him/her
+-Simple dictionary is maintained to detect the type of query from the keywords in the query.
+
+################################# INSTRUCTIONS ########################################
+
+Running of code:     1) Type "make" 
+					 2) Then type  ./run.sh <name of the input file for the enviornment> -d num_days
+					 3) Then, enter Your queries.
+					 4) Type "q", "quit", "exit" or "bye" to exit the program.	
